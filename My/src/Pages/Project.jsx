@@ -167,14 +167,11 @@ export default function Project() {
       {/* Navigation */}
       <nav
         id="navbar-top"
-        className="navbar navbar-expand-lg navbar-light bg-white sticky-top"
+        className="navbar navbar-expand-lg navbar-light  sticky-top"
       >
         <div className="container-fluid px-5">
-          <a
-            className="navbar-brand fw-bold fs-2"
-            href="#"
-            style={{ color: "#3f396d" }}
-          >
+          {" "}
+          <a className="navbar-brand fw-bold fs-2" href="#">
             Portfolio
           </a>
           <button
@@ -222,692 +219,709 @@ export default function Project() {
               </li>
             </ul>
           </div>
-          <button className="c-btn ms-4 py-2 px-4 rounded-pill d-none d-md-block">
-            Contact
-          </button>
+           <button className="c-btn  ">
+                  <a
+                    href="Entry Level Web Developer Resume.pdf"
+                    download="Piumal_CV"
+                    style={{ textDecoration: "none", color: "#fff" }}
+                  >
+                    Download CV
+                  </a>
+                </button>
         </div>
       </nav>
-
       {/* Home Section */}
       <section className="home pt-5 pb-5" id="home">
-        <div className="row justify-content-evenly align-middle">
-          <div
-            className="col-10 col-md-6 text-center text-md-start"
-            data-aos="slide-right"
-          >
-            <h2 style={{ color: "#3f396d" }}>
-              Hello! I Am <br />
-              <span className="c-orange">Pawan Kumavat</span>
-            </h2>
-            <p className="text-muted">
-              I'm A Web Developer having 5 years of experience in expertise of
-              creating website with fully responsive Also with backend part too.
-            </p>
-            <button className="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
-              Hire Me
-            </button>
-            <a href="" className="link ms-4 d-none">
-              See My Work
-            </a>
-          </div>
-          <div className="col-10 col-md-4 d-none d-md-block">
-            <img src={banner01} className="img-fluid" alt="Banner" />
+        <div className="container">
+          <div className="row justify-content-evenly align-middle">
+            <div
+              className="col-10 col-md-6 text-center text-md-start"
+              data-aos="slide-right"
+            >
+              <h2 className="mt-5 glow-text">
+               <span className="h">Hello! I Am</span>  <br />
+                <span className="c-orange">Piumal Harshana</span>
+              </h2>
+            
+                <span className="one">And I'm A</span>  <span className="two"> Full-Stack Developer</span><br/> <br/>  <p className="text">having 5 years of experience in expertise of
+                creating website with fully responsive Also with backend part
+                too.
+              </p>
+            
+              <button className="h-btn  ">
+                Hire Me
+              </button>
+          
+        
+              <a href="" className="link ms-4 d-none">
+                See My Work
+              </a>
+            </div>{" "}
+            <div className="col-10 col-md-4 d-none d-md-block">
+              <img
+                src={banner01}
+                className="img-fluid floating glow-border"
+                alt="Banner"
+              />
+            </div>
           </div>
         </div>
-      </section>
-
+      </section>{" "}
       {/* Expertise Section */}
       <section className="expertise mt-5" id="service">
-        <div className="heading text-center">
-          <small>My Expertise</small>
-          <h3>
-            Provide Wide Range of <br />
-            Digital Services
-          </h3>
-        </div>
-        <div className="row justify-content-evenly mt-5">
-          <div className="col-10 col-md-4" data-aos="fade-up">
-            <div className="service-card">
-              <div className="img">
-                <img
-                  src={serviceIcon1}
-                  className="w-25 img-fluid img"
-                  alt="Web Design"
-                />
-              </div>
-              <div className="content mt-3">
-                <h4>Web Design</h4>
-                <p className="text-muted">
-                  Dolor repellendus temporibus autem quibusdam officiis debitis
-                  rerum neces aibus minima veniam.
-                </p>
-                <a href="" className="link">
-                  Read More
-                </a>
-              </div>
-            </div>
+        <div className="container">
+          <div className="heading text-center">
+            <small>My Expertise</small>
+            <h3>
+              Provide Wide Range of <br />
+              Digital Services
+            </h3>
           </div>
-          <div className="col-md-4 col-10" data-aos="fade-up">
-            <div className="service-card">
-              <div className="img">
-                <img
-                  src={serviceIcon2}
-                  className="w-25 img-fluid img"
-                  alt="Web Development"
-                />
-              </div>
-              <div className="content mt-3">
-                <h4>Web Development</h4>
-                <p className="text-muted">
-                  Dolor repellendus temporibus autem quibusdam officiis debitis
-                  rerum neces aibus minima veniam.
-                </p>
-                <a href="" className="link">
-                  Read More
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4 col-10" data-aos="fade-up">
-            <div className="service-card">
-              <div className="img">
-                <img
-                  src={serviceIcon3}
-                  className="w-25 img-fluid img"
-                  alt="Debugging"
-                />
-              </div>
-              <div className="content mt-3">
-                <h4>Debugging</h4>
-                <p className="text-muted">
-                  Dolor repellendus temporibus autem quibusdam officiis debitis
-                  rerum neces aibus minima veniam.
-                </p>
-                <a href="" className="link">
-                  Read More
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section className="skill mt-5 py-5" id="about">
-        <div className="row justify-content-evenly">
-          <div
-            className="col-10 col-md-5 skill-with-progress"
-            data-aos="slide-right"
-          >
-            <div className="row justify-content-evenly">
-              <div className="col-10 col-md-6">
-                <div className="progress-card ms-3 ms-md-0">
-                  <div
-                    className="circular-progress html-css"
-                    style={{
-                      background: `conic-gradient(#fca61f ${
-                        htmlProgress * 3.6
-                      }deg, #ededed 0deg)`,
-                    }}
-                  >
-                    <span className="progress-value html-progress">
-                      {htmlProgress}%
-                    </span>
-                  </div>
-                  <br />
-                  <span className="text">HTML & CSS</span>
+          <div className="row justify-content-evenly mt-5">
+            <div className="col-10 col-md-4" data-aos="fade-up">
+              <div className="service-card">
+                <div className="img">
+                  <img
+                    src={serviceIcon1}
+                    className="w-25 img-fluid img"
+                    alt="Web Design"
+                  />
                 </div>
-              </div>
-              <div className="col-10 col-md-6 mt-4 mt-md-0">
-                <div className="progress-card ms-3 ms-md-0">
-                  <div
-                    className="circular-progress javascript"
-                    style={{
-                      background: `conic-gradient(#7d2ae8 ${
-                        jsProgress * 3.6
-                      }deg, #ededed 0deg)`,
-                    }}
-                  >
-                    <span className="progress-value javascript-progress">
-                      {jsProgress}%
-                    </span>
-                  </div>
-                  <br />
-                  <span className="text">JavaScript</span>
-                </div>
-              </div>
-            </div>
-            <div className="row justify-content-evenly mt-4">
-              <div className="col-10 col-md-6">
-                <div className="progress-card ms-3 ms-md-0">
-                  <div
-                    className="circular-progress php"
-                    style={{
-                      background: `conic-gradient(#20bf6b ${
-                        phpProgress * 3.6
-                      }deg, #ededed 0deg)`,
-                    }}
-                  >
-                    <span className="progress-value php-progress">
-                      {phpProgress}%
-                    </span>
-                  </div>
-                  <br />
-                  <span className="text">PHP</span>
-                </div>
-              </div>
-              <div className="col-10 col-md-6 mt-4 mt-md-0">
-                <div className="progress-card ms-3 ms-md-0">
-                  <div
-                    className="circular-progress reactjs"
-                    style={{
-                      background: `conic-gradient(#3742fa ${
-                        reactProgress * 3.6
-                      }deg, #ededed 0deg)`,
-                    }}
-                  >
-                    <span className="progress-value reactjs-progress">
-                      {reactProgress}%
-                    </span>
-                  </div>
-                  <br />
-                  <span className="text">ReactJS</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-10 col-md-5 skill-detail" data-aos="slide-left">
-            <div className="heading mt-5 mt-md-3">
-              <small>My Skills</small>
-              <h3>Beautiful & Unique Digital Experiences</h3>
-              <p className="text-muted">
-                Nostrum exercitationem ullam corporis suscipit laborioa nisi ut
-                aliquid exrea commodi consequatur magni dolores aos qui ratione
-                voluptatem nesciunt.
-              </p>
-              <p className="text-muted">
-                Quia voluptas sit aspernatur aut odit aut fugit, sed ruiano
-                consequntar magni dolores.
-              </p>
-              <button className="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
-                <a
-                  href="Entry Level Web Developer Resume.pdf"
-                  download="SampleCV"
-                  style={{ textDecoration: "none", color: "#fff" }}
-                >
-                  Download CV
-                </a>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio Section */}
-      <section className="portfolio" id="portfolio">
-        <div className="heading text-center pt-5">
-          <small>Creative Work</small>
-          <h3>Check My Portfolio</h3>
-        </div>
-
-        <div id="myBtnContainer" className="text-center mt-4">
-          <button className="filter-item" data-filter="all">
-            All
-          </button>
-          <button className="filter-item" data-filter="game">
-            Game
-          </button>
-          <button className="filter-item" data-filter="webapp">
-            Web App
-          </button>
-          <button className="filter-item" data-filter="website">
-            Website
-          </button>
-          <button className="filter-item" data-filter="brand">
-            Brand
-          </button>
-        </div>
-
-        <div className="portfolio-body">
-          <div className="row justify-content-evenly px-4">
-            <div
-              className="post col-md-4 game all col-10 mt-3 mt-md-0"
-              data-aos="fade-up"
-            >
-              <div className="card">
-                <img src={game2048} className="card-img-top" alt="2048 Game" />
-                <div className="card-body text-center">
-                  <h4 className="card-title">2048 Game</h4>
-                  <span className="badge bg-secondary badge-pill">
-                    HTML&CSS
-                  </span>
-                  <span className="badge bg-secondary badge-pill">
-                    JavaScript
-                  </span>
-                  <span className="badge bg-secondary badge-pill mb-2">
-                    Game
-                  </span>
-                  <br />
-                  <a href="#" className="link">
+                <div className="content mt-3">
+                  <h4>Web Design</h4>
+                  <p className="text-muted">
+                    Dolor repellendus temporibus autem quibusdam officiis
+                    debitis rerum neces aibus minima veniam.
+                  </p>
+                  <a href="" className="link">
                     Read More
                   </a>
                 </div>
               </div>
             </div>
+            <div className="col-md-4 col-10" data-aos="fade-up">
+              <div className="service-card">
+                <div className="img">
+                  <img
+                    src={serviceIcon2}
+                    className="w-25 img-fluid img"
+                    alt="Web Development"
+                  />
+                </div>
+                <div className="content mt-3">
+                  <h4>Web Development</h4>
+                  <p className="text-muted">
+                    Dolor repellendus temporibus autem quibusdam officiis
+                    debitis rerum neces aibus minima veniam.
+                  </p>
+                  <a href="" className="link">
+                    Read More
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4 col-10" data-aos="fade-up">
+              <div className="service-card">
+                <div className="img">
+                  <img
+                    src={serviceIcon3}
+                    className="w-25 img-fluid img"
+                    alt="Debugging"
+                  />
+                </div>
+                <div className="content mt-3">
+                  <h4>Debugging</h4>
+                  <p className="text-muted">
+                    Dolor repellendus temporibus autem quibusdam officiis
+                    debitis rerum neces aibus minima veniam.
+                  </p>
+                  <a href="" className="link">
+                    Read More
+                  </a>
+                </div>
+              </div>
+            </div>{" "}
+          </div>
+        </div>
+      </section>
+      {/* Skills Section */}
+      <section className="skill mt-5 py-5" id="about">
+        <div className="container">
+          <div className="row justify-content-evenly">
             <div
-              className="post col-md-4 website all col-10 mt-3 mt-md-0"
-              data-aos="fade-up"
+              className="col-10 col-md-5 skill-with-progress"
+              data-aos="slide-right"
             >
+              <div className="row justify-content-evenly">
+                <div className="col-10 col-md-6">
+                  <div className="progress-card ms-3 ms-md-0">
+                    <div
+                      className="circular-progress html-css"
+                      style={{
+                        background: `conic-gradient(#fca61f ${
+                          htmlProgress * 3.6
+                        }deg, #ededed 0deg)`,
+                      }}
+                    >
+                      <span className="progress-value html-progress">
+                        {htmlProgress}%
+                      </span>
+                    </div>
+                    <br />
+                    <span className="text">HTML & CSS</span>
+                  </div>
+                </div>
+                <div className="col-10 col-md-6 mt-4 mt-md-0">
+                  <div className="progress-card ms-3 ms-md-0">
+                    <div
+                      className="circular-progress javascript"
+                      style={{
+                        background: `conic-gradient(#7d2ae8 ${
+                          jsProgress * 3.6
+                        }deg, #ededed 0deg)`,
+                      }}
+                    >
+                      <span className="progress-value javascript-progress">
+                        {jsProgress}%
+                      </span>
+                    </div>
+                    <br />
+                    <span className="text">JavaScript</span>
+                  </div>
+                </div>
+              </div>
+              <div className="row justify-content-evenly mt-4">
+                <div className="col-10 col-md-6">
+                  <div className="progress-card ms-3 ms-md-0">
+                    <div
+                      className="circular-progress php"
+                      style={{
+                        background: `conic-gradient(#20bf6b ${
+                          phpProgress * 3.6
+                        }deg, #ededed 0deg)`,
+                      }}
+                    >
+                      <span className="progress-value php-progress">
+                        {phpProgress}%
+                      </span>
+                    </div>
+                    <br />
+                    <span className="text">PHP</span>
+                  </div>
+                </div>
+                <div className="col-10 col-md-6 mt-4 mt-md-0">
+                  <div className="progress-card ms-3 ms-md-0">
+                    <div
+                      className="circular-progress reactjs"
+                      style={{
+                        background: `conic-gradient(#3742fa ${
+                          reactProgress * 3.6
+                        }deg, #ededed 0deg)`,
+                      }}
+                    >
+                      <span className="progress-value reactjs-progress">
+                        {reactProgress}%
+                      </span>
+                    </div>
+                    <br />
+                    <span className="text">ReactJS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-10 col-md-5 skill-detail" data-aos="slide-left">
+              <div className="heading mt-5 mt-md-3">
+                <small>My Skills</small>
+                <h3>Beautiful & Unique Digital Experiences</h3>
+                <p className="text-muted">
+                  Nostrum exercitationem ullam corporis suscipit laborioa nisi
+                  ut aliquid exrea commodi consequatur magni dolores aos qui
+                  ratione voluptatem nesciunt.
+                </p>
+                <p className="text-muted">
+                  Quia voluptas sit aspernatur aut odit aut fugit, sed ruiano
+                  consequntar magni dolores.
+                </p>
+                
+              </div>{" "}
+            </div>
+          </div>
+        </div>
+      </section>{" "}
+      {/* Portfolio Section */}
+      <section className="portfolio" id="portfolio">
+        <div className="container">
+          <div className="heading text-center pt-5">
+            <small>Creative Work</small>
+            <h3>Check My Portfolio</h3>
+          </div>
+
+          <div id="myBtnContainer" className="text-center mt-4">
+            <button className="filter-item" data-filter="all">
+              All
+            </button>
+            <button className="filter-item" data-filter="game">
+              Game
+            </button>
+            <button className="filter-item" data-filter="webapp">
+              Web App
+            </button>
+            <button className="filter-item" data-filter="website">
+              Website
+            </button>
+            <button className="filter-item" data-filter="brand">
+              Brand
+            </button>
+          </div>
+
+          <div className="portfolio-body">
+            <div className="row justify-content-evenly px-4">
+              <div
+                className="post col-md-4 game all col-10 mt-3 mt-md-0"
+                data-aos="fade-up"
+              >
+                <div className="card">
+                  <img
+                    src={game2048}
+                    className="card-img-top"
+                    alt="2048 Game"
+                  />
+                  <div className="card-body text-center">
+                    <h4 className="card-title">2048 Game</h4>
+                    <span className="badge bg-secondary badge-pill">
+                      HTML&CSS
+                    </span>
+                    <span className="badge bg-secondary badge-pill">
+                      JavaScript
+                    </span>
+                    <span className="badge bg-secondary badge-pill mb-2">
+                      Game
+                    </span>
+                    <br />
+                    <a href="#" className="link">
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="post col-md-4 website all col-10 mt-3 mt-md-0"
+                data-aos="fade-up"
+              >
+                <div className="card">
+                  <img
+                    src={currencyConverter}
+                    className="card-img-top"
+                    alt="Currency Converter"
+                  />
+                  <div className="card-body text-center">
+                    <h4 className="card-title">Converter App</h4>
+                    <span className="badge bg-secondary badge-pill">
+                      HTML&CSS
+                    </span>
+                    <span className="badge bg-secondary badge-pill">
+                      JavaScript
+                    </span>
+                    <span className="badge bg-secondary badge-pill mb-2">
+                      Website
+                    </span>
+                    <br />
+                    <a href="#" className="read-more-btn link">
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="post col-md-4 webapp all col-10 mt-3 mt-md-0"
+                data-aos="fade-up"
+              >
+                <div className="card">
+                  <img
+                    src={dictionary}
+                    className="card-img-top"
+                    alt="Dictionary"
+                  />
+                  <div className="card-body text-center">
+                    <h4 className="card-title">Dictionary</h4>
+                    <span className="badge bg-secondary badge-pill">
+                      HTML&CSS
+                    </span>
+                    <span className="badge bg-secondary badge-pill">
+                      JavaScript
+                    </span>
+                    <span className="badge bg-secondary badge-pill mb-2">
+                      WebApp
+                    </span>
+                    <br />
+                    <a href="#" className="read-more-btn link">
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row justify-content-evenly mt-4 px-4">
+              <div
+                className="post col-md-4 game all col-10 mt-3 mt-md-0"
+                data-aos="fade-up"
+              >
+                <div className="card">
+                  <img
+                    src={piceditor}
+                    className="card-img-top"
+                    alt="Pic Editor"
+                  />
+                  <div className="card-body text-center">
+                    <h4 className="card-title">PicEditor App</h4>
+                    <span className="badge bg-secondary badge-pill">
+                      HTML&CSS
+                    </span>
+                    <span className="badge bg-secondary badge-pill">
+                      JavaScript
+                    </span>
+                    <span className="badge bg-secondary badge-pill mb-2">
+                      App
+                    </span>
+                    <br />
+                    <a href="#" className="read-more-btn link">
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="post col-md-4 website all col-10 mt-3 mt-md-0"
+                data-aos="fade-up"
+              >
+                <div className="card">
+                  <img
+                    src={tictactoe}
+                    className="card-img-top"
+                    alt="Tic Tac Toe"
+                  />
+                  <div className="card-body text-center">
+                    <h4 className="card-title">TicTacToe Game</h4>
+                    <span className="badge bg-secondary badge-pill">
+                      HTML&CSS
+                    </span>
+                    <span className="badge bg-secondary badge-pill">
+                      JavaScript
+                    </span>
+                    <span className="badge bg-secondary badge-pill mb-2">
+                      Game
+                    </span>
+                    <br />
+                    <a href="#" className="read-more-btn link">
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="post col-md-4 all col-10 mt-3 mt-md-0"
+                data-aos="fade-up"
+              >
+                <div className="card">
+                  <img
+                    src={langTranslator}
+                    className="card-img-top"
+                    alt="Language Translator"
+                  />
+                  <div className="card-body text-center">
+                    <h4 className="card-title">Lang Translator</h4>
+                    <span className="badge bg-secondary badge-pill">
+                      HTML&CSS
+                    </span>
+                    <span className="badge bg-secondary badge-pill">
+                      JavaScript
+                    </span>
+                    <span className="badge bg-secondary badge-pill mb-2">
+                      Web App
+                    </span>
+                    <br />
+                    <a href="#" className="read-more-btn link">
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>{" "}
+          </div>
+        </div>
+      </section>{" "}
+      {/* Testimonials Section */}
+      <section className="testimonial mt-5 pt-5" id="testimonial">
+        <div className="container">
+          <div className="row justify-content-evenly">
+            <div className="col-md-4 col-10" data-aos="slide-right">
+              <img
+                src={testimonialsImg}
+                className="img-fluid"
+                alt="Testimonials"
+              />
+            </div>
+            <div className="col-md-6 col-10 mt-5" data-aos="slide-left">
+              <div className="heading">
+                <small>Testimonials</small>
+                <h3>Happy Clients Feedback</h3>
+
+                <div
+                  id="carouselExampleControls"
+                  className="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div className="carousel-inner">
+                    <div className="carousel-item active">
+                      <div className="row justify-content-evenly">
+                        <div className="col-2 text-center">
+                          <i className="bi bi-quote"></i>
+                        </div>
+                        <div className="col-10">
+                          <p className="text-muted">
+                            Quisruam est, qui dolorem ipsum quia dolor sit amet,
+                            consecteaur aeci velit, sed quia non numquam eius
+                            modi tempora incidunt ut lao magnam aliquam quaerat
+                            ...
+                          </p>
+                          <h4>Kevin Andrew</h4>
+                          <small className="fs-6 text-muted">
+                            CEO of Company
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="carousel-item">
+                      <div className="row justify-content-evenly">
+                        <div className="col-2 text-center">
+                          <i className="bi bi-quote"></i>
+                        </div>
+                        <div className="col-10">
+                          <p className="text-muted">
+                            Excellent work and professional service. Highly
+                            recommended for anyone looking for quality web
+                            development solutions.
+                          </p>
+                          <h4>Sarah Johnson</h4>
+                          <small className="fs-6 text-muted">
+                            Marketing Director
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="carousel-item">
+                      <div className="row justify-content-evenly">
+                        <div className="col-2 text-center">
+                          <i className="bi bi-quote"></i>
+                        </div>
+                        <div className="col-10">
+                          <p className="text-muted">
+                            Outstanding creativity and technical skills.
+                            Delivered exactly what we needed within the
+                            timeline.
+                          </p>
+                          <h4>Michael Brown</h4>
+                          <small className="fs-6 text-muted">
+                            Startup Founder
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    className="nextprev-btn rounded-pill prev-btn"
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev"
+                  >
+                    <i className="bi bi-arrow-left-circle-fill prev"></i>
+                    <span className="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    className="nextprev-btn rounded-pill next-btn"
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next"
+                  >
+                    <i className="bi bi-arrow-right-circle-fill next"></i>
+                    <span className="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>{" "}
+          </div>
+        </div>
+      </section>{" "}
+      {/* Blog Section */}
+      <section className="blog mt-5 pb-5" id="blog">
+        <div className="container">
+          <div className="heading text-center pt-5">
+            <small>Latest News</small>
+            <h3>Blog & Articles</h3>
+          </div>
+          <div
+            className="row justify-content-evenly px-4 mt-4"
+            data-aos="fade-up"
+          >
+            <div className="blogpost col-md-4 col-10 mt-2 mt-md-0 game all">
+              <div className="card">
+                <img
+                  src={game2048}
+                  className="card-img-top rounded-4"
+                  alt="Blog post"
+                />
+                <div className="card-body px-4">
+                  <small>By Pawan Kumavat</small>
+                  <span className="ms-3">Mar 8,2022</span>
+                  <h4 className="card-title">
+                    <a href="">Building Interactive Games with JavaScript</a>
+                  </h4>
+                  <p className="text-muted">
+                    Learn how to create engaging browser games using modern
+                    JavaScript techniques and best practices.
+                  </p>
+                  <a href="#" className="read-more-btn link">
+                    Read More
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="blogpost col-md-4 col-10 mt-5 mt-md-0 website all">
               <div className="card">
                 <img
                   src={currencyConverter}
-                  className="card-img-top"
-                  alt="Currency Converter"
+                  className="card-img-top rounded-4"
+                  alt="Blog post"
                 />
-                <div className="card-body text-center">
-                  <h4 className="card-title">Converter App</h4>
-                  <span className="badge bg-secondary badge-pill">
-                    HTML&CSS
-                  </span>
-                  <span className="badge bg-secondary badge-pill">
-                    JavaScript
-                  </span>
-                  <span className="badge bg-secondary badge-pill mb-2">
-                    Website
-                  </span>
-                  <br />
+                <div className="card-body px-4">
+                  <small>By Pawan Kumavat</small>
+                  <span className="ms-3">Mar 15,2022</span>
+                  <h4 className="card-title">
+                    <a href="">API Integration in Web Applications</a>
+                  </h4>
+                  <p className="text-muted">
+                    Explore different methods of integrating external APIs into
+                    your web applications for enhanced functionality.
+                  </p>
                   <a href="#" className="read-more-btn link">
                     Read More
                   </a>
                 </div>
               </div>
             </div>
-            <div
-              className="post col-md-4 webapp all col-10 mt-3 mt-md-0"
-              data-aos="fade-up"
-            >
+            <div className="blogpost col-md-4 col-10 mt-5 mt-md-0 webapp all">
               <div className="card">
                 <img
                   src={dictionary}
-                  className="card-img-top"
-                  alt="Dictionary"
+                  className="card-img-top rounded-4"
+                  alt="Blog post"
                 />
-                <div className="card-body text-center">
-                  <h4 className="card-title">Dictionary</h4>
-                  <span className="badge bg-secondary badge-pill">
-                    HTML&CSS
-                  </span>
-                  <span className="badge bg-secondary badge-pill">
-                    JavaScript
-                  </span>
-                  <span className="badge bg-secondary badge-pill mb-2">
-                    WebApp
-                  </span>
-                  <br />
+                <div className="card-body px-4">
+                  <small>By Pawan Kumavat</small>
+                  <span className="ms-3">Mar 22,2022</span>
+                  <h4 className="card-title">
+                    <a href="">React Best Practices and Patterns</a>
+                  </h4>
+                  <p className="text-muted">
+                    Discover essential React patterns and best practices for
+                    building scalable and maintainable applications.
+                  </p>
                   <a href="#" className="read-more-btn link">
                     Read More
                   </a>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="row justify-content-evenly mt-4 px-4">
-            <div
-              className="post col-md-4 game all col-10 mt-3 mt-md-0"
-              data-aos="fade-up"
-            >
-              <div className="card">
-                <img
-                  src={piceditor}
-                  className="card-img-top"
-                  alt="Pic Editor"
-                />
-                <div className="card-body text-center">
-                  <h4 className="card-title">PicEditor App</h4>
-                  <span className="badge bg-secondary badge-pill">
-                    HTML&CSS
-                  </span>
-                  <span className="badge bg-secondary badge-pill">
-                    JavaScript
-                  </span>
-                  <span className="badge bg-secondary badge-pill mb-2">
-                    App
-                  </span>
-                  <br />
-                  <a href="#" className="read-more-btn link">
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              className="post col-md-4 website all col-10 mt-3 mt-md-0"
-              data-aos="fade-up"
-            >
-              <div className="card">
-                <img
-                  src={tictactoe}
-                  className="card-img-top"
-                  alt="Tic Tac Toe"
-                />
-                <div className="card-body text-center">
-                  <h4 className="card-title">TicTacToe Game</h4>
-                  <span className="badge bg-secondary badge-pill">
-                    HTML&CSS
-                  </span>
-                  <span className="badge bg-secondary badge-pill">
-                    JavaScript
-                  </span>
-                  <span className="badge bg-secondary badge-pill mb-2">
-                    Game
-                  </span>
-                  <br />
-                  <a href="#" className="read-more-btn link">
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              className="post col-md-4 all col-10 mt-3 mt-md-0"
-              data-aos="fade-up"
-            >
-              <div className="card">
-                <img
-                  src={langTranslator}
-                  className="card-img-top"
-                  alt="Language Translator"
-                />
-                <div className="card-body text-center">
-                  <h4 className="card-title">Lang Translator</h4>
-                  <span className="badge bg-secondary badge-pill">
-                    HTML&CSS
-                  </span>
-                  <span className="badge bg-secondary badge-pill">
-                    JavaScript
-                  </span>
-                  <span className="badge bg-secondary badge-pill mb-2">
-                    Web App
-                  </span>
-                  <br />
-                  <a href="#" className="read-more-btn link">
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
+            </div>{" "}
           </div>
         </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="testimonial mt-5 pt-5" id="testimonial">
-        <div className="row justify-content-evenly">
-          <div className="col-md-4 col-10" data-aos="slide-right">
-            <img
-              src={testimonialsImg}
-              className="img-fluid"
-              alt="Testimonials"
-            />
-          </div>
-          <div className="col-md-6 col-10 mt-5" data-aos="slide-left">
-            <div className="heading">
-              <small>Testimonials</small>
-              <h3>Happy Clients Feedback</h3>
-
-              <div
-                id="carouselExampleControls"
-                className="carousel slide"
-                data-bs-ride="carousel"
-              >
-                <div className="carousel-inner">
-                  <div className="carousel-item active">
-                    <div className="row justify-content-evenly">
-                      <div className="col-2 text-center">
-                        <i className="bi bi-quote"></i>
-                      </div>
-                      <div className="col-10">
-                        <p className="text-muted">
-                          Quisruam est, qui dolorem ipsum quia dolor sit amet,
-                          consecteaur aeci velit, sed quia non numquam eius modi
-                          tempora incidunt ut lao magnam aliquam quaerat ...
-                        </p>
-                        <h4>Kevin Andrew</h4>
-                        <small className="fs-6 text-muted">
-                          CEO of Company
-                        </small>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="carousel-item">
-                    <div className="row justify-content-evenly">
-                      <div className="col-2 text-center">
-                        <i className="bi bi-quote"></i>
-                      </div>
-                      <div className="col-10">
-                        <p className="text-muted">
-                          Excellent work and professional service. Highly
-                          recommended for anyone looking for quality web
-                          development solutions.
-                        </p>
-                        <h4>Sarah Johnson</h4>
-                        <small className="fs-6 text-muted">
-                          Marketing Director
-                        </small>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="carousel-item">
-                    <div className="row justify-content-evenly">
-                      <div className="col-2 text-center">
-                        <i className="bi bi-quote"></i>
-                      </div>
-                      <div className="col-10">
-                        <p className="text-muted">
-                          Outstanding creativity and technical skills. Delivered
-                          exactly what we needed within the timeline.
-                        </p>
-                        <h4>Michael Brown</h4>
-                        <small className="fs-6 text-muted">
-                          Startup Founder
-                        </small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  className="nextprev-btn rounded-pill prev-btn"
-                  type="button"
-                  data-bs-target="#carouselExampleControls"
-                  data-bs-slide="prev"
-                >
-                  <i className="bi bi-arrow-left-circle-fill prev"></i>
-                  <span className="visually-hidden">Previous</span>
-                </button>
-                <button
-                  className="nextprev-btn rounded-pill next-btn"
-                  type="button"
-                  data-bs-target="#carouselExampleControls"
-                  data-bs-slide="next"
-                >
-                  <i className="bi bi-arrow-right-circle-fill next"></i>
-                  <span className="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Blog Section */}
-      <section className="blog mt-5 pb-5" id="blog">
-        <div className="heading text-center pt-5">
-          <small>Latest News</small>
-          <h3>Blog & Articles</h3>
-        </div>
-        <div
-          className="row justify-content-evenly px-4 mt-4"
-          data-aos="fade-up"
-        >
-          <div className="blogpost col-md-4 col-10 mt-2 mt-md-0 game all">
-            <div className="card">
-              <img
-                src={game2048}
-                className="card-img-top rounded-4"
-                alt="Blog post"
-              />
-              <div className="card-body px-4">
-                <small>By Pawan Kumavat</small>
-                <span className="ms-3">Mar 8,2022</span>
-                <h4 className="card-title">
-                  <a href="">Building Interactive Games with JavaScript</a>
-                </h4>
-                <p className="text-muted">
-                  Learn how to create engaging browser games using modern
-                  JavaScript techniques and best practices.
-                </p>
-                <a href="#" className="read-more-btn link">
-                  Read More
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="blogpost col-md-4 col-10 mt-5 mt-md-0 website all">
-            <div className="card">
-              <img
-                src={currencyConverter}
-                className="card-img-top rounded-4"
-                alt="Blog post"
-              />
-              <div className="card-body px-4">
-                <small>By Pawan Kumavat</small>
-                <span className="ms-3">Mar 15,2022</span>
-                <h4 className="card-title">
-                  <a href="">API Integration in Web Applications</a>
-                </h4>
-                <p className="text-muted">
-                  Explore different methods of integrating external APIs into
-                  your web applications for enhanced functionality.
-                </p>
-                <a href="#" className="read-more-btn link">
-                  Read More
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="blogpost col-md-4 col-10 mt-5 mt-md-0 webapp all">
-            <div className="card">
-              <img
-                src={dictionary}
-                className="card-img-top rounded-4"
-                alt="Blog post"
-              />
-              <div className="card-body px-4">
-                <small>By Pawan Kumavat</small>
-                <span className="ms-3">Mar 22,2022</span>
-                <h4 className="card-title">
-                  <a href="">React Best Practices and Patterns</a>
-                </h4>
-                <p className="text-muted">
-                  Discover essential React patterns and best practices for
-                  building scalable and maintainable applications.
-                </p>
-                <a href="#" className="read-more-btn link">
-                  Read More
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      </section>{" "}
       {/* Contact Section */}
       <section className="contact py-5" id="contact">
-        <div className="heading text-center">
-          <small>Get in Touch</small>
-          <h3>Any Questions? Feel Free to Contact</h3>
-        </div>
-        <div className="row justify-content-evenly mt-5">
-          <div
-            className="col-md-5 col-10 contact-details"
-            data-aos="slide-right"
-          >
-            <div className="row justify-content-evenly">
-              <div className="col-1">
-                <i className="bi bi-geo-alt-fill"></i>
-              </div>
-              <div className="col-11">
-                <p>121 King Street Melbourne, 3000, Australia</p>
-              </div>
-            </div>
-            <div className="row justify-content-evenly">
-              <div className="col-1">
-                <i className="bi bi-telephone-fill"></i>
-              </div>
-              <div className="col-11">
-                <p>+91 9527818693</p>
-              </div>
-            </div>
-            <div className="row justify-content-evenly">
-              <div className="col-1">
-                <i className="bi bi-send-fill"></i>
-              </div>
-              <div className="col-11">
-                <p>codewithpawan@gmail.com</p>
-              </div>
-            </div>
-            <div className="row justify-content-evenly">
-              <div className="col-1">
-                <i className="bi bi-globe-americas"></i>
-              </div>
-              <div className="col-11">
-                <p>codingpawan.com</p>
-              </div>
-            </div>
+        <div className="container">
+          <div className="heading text-center">
+            <small>Get in Touch</small>
+            <h3>Any Questions? Feel Free to Contact</h3>
           </div>
-          <div className="col-md-5 col-10 mt-3 mt-md-0" data-aos="slide-left">
-            <div className="contact-form">
-              <div className="mb-3">
-                <input
-                  type="text"
-                  className="form-control"
-                  id="contactName"
-                  placeholder="Name"
-                />
+          <div className="row justify-content-evenly mt-5">
+            <div
+              className="col-md-5 col-10 contact-details"
+              data-aos="slide-right"
+            >
+              <div className="row justify-content-evenly">
+                <div className="col-1">
+                  <i className="bi bi-geo-alt-fill"></i>
+                </div>
+                <div className="col-11">
+                  <p>121 King Street Melbourne, 3000, Australia</p>
+                </div>
               </div>
-              <div className="mb-3">
-                <input
-                  type="email"
-                  className="form-control"
-                  id="contactEmail"
-                  placeholder="E-mail"
-                />
+              <div className="row justify-content-evenly">
+                <div className="col-1">
+                  <i className="bi bi-telephone-fill"></i>
+                </div>
+                <div className="col-11">
+                  <p>+91 9527818693</p>
+                </div>
               </div>
-              <div className="mb-3">
-                <input
-                  type="text"
-                  className="form-control"
-                  id="contactMobile"
-                  placeholder="Mobile No."
-                />
+              <div className="row justify-content-evenly">
+                <div className="col-1">
+                  <i className="bi bi-send-fill"></i>
+                </div>
+                <div className="col-11">
+                  <p>codewithpawan@gmail.com</p>
+                </div>
               </div>
-              <div className="mb-3">
-                <textarea
-                  className="form-control"
-                  id="contactMessage"
-                  placeholder="Message"
-                  rows="5"
-                ></textarea>
+              <div className="row justify-content-evenly">
+                <div className="col-1">
+                  <i className="bi bi-globe-americas"></i>
+                </div>
+                <div className="col-11">
+                  <p>codingpawan.com</p>
+                </div>
               </div>
-              <button className="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
-                Submit
-              </button>
             </div>
+            <div className="col-md-5 col-10 mt-3 mt-md-0" data-aos="slide-left">
+              <div className="contact-form">
+                <div className="mb-3">
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="contactName"
+                    placeholder="Name"
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="contactEmail"
+                    placeholder="E-mail"
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="contactMobile"
+                    placeholder="Mobile No."
+                  />
+                </div>
+                <div className="mb-3">
+                  <textarea
+                    className="form-control"
+                    id="contactMessage"
+                    placeholder="Message"
+                    rows="5"
+                  ></textarea>
+                </div>
+                <button className="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+                  Submit
+                </button>
+              </div>
+            </div>{" "}
           </div>
         </div>
       </section>
-
       {/* Back to Top Button */}
       <button
         type="button"
@@ -916,7 +930,6 @@ export default function Project() {
       >
         <i className="bi bi-arrow-up"></i>
       </button>
-
       {/* Footer */}
       <footer className="text-center text-muted py-4">
         <h3 className="text-white pt-4" data-aos="fade-up">
