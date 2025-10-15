@@ -15,6 +15,40 @@ import tictactoe from "../assets/tictactoe.png";
 import langTranslator from "../assets/lang-translator.png";
 import testimonialsImg from "../assets/tastimonials-img.png";
 
+// Import SVG logos for technologies
+import htmlLogo from "../assets/HTML.svg";
+import cssLogo from "../assets/CSS.svg";
+import jsLogo from "../assets/JavaScript.svg";
+import bootstrapLogo from "../assets/Bootstrap.svg";
+import phpLogo from "../assets/PHP-Light.svg";
+import pythonLogo from "../assets/Python-Light.svg";
+import reactLogo from "../assets/React-Dark.svg";
+
+// Framework and Library logos
+import laravelLogo from "../assets/Laravel-Dark.svg";
+import fastApiLogo from "../assets/FastAPI.svg";
+import nodejsLogo from "../assets/NodeJS-Dark.svg";
+import expressjsLogo from "../assets/ExpressJS-Dark.svg";
+import tailwindLogo from "../assets/TailwindCSS-Dark.svg";
+
+// Database logos
+import mongodbLogo from "../assets/MongoDB.svg";
+import mysqlLogo from "../assets/MySQL-Dark.svg";
+import firebaseLogo from "../assets/Firebase-Dark.svg";
+
+// Design Tool logos
+import figmaLogo from "../assets/Figma-Dark.svg";
+import photoshopLogo from "../assets/Photoshop.svg";
+import illustratorLogo from "../assets/Illustrator.svg";
+import canva from "../assets/Canva.png";
+
+// Other Tool logos
+import gitLogo from "../assets/Git.svg";
+import githubLogo from "../assets/Github-Light.svg";
+import vscodeLogo from "../assets/VSCode-Dark.svg";
+import dockerLogo from "../assets/Docker.svg";
+import postmanLogo from "../assets/Postman.svg";
+
 export default function Project() {
   const [htmlProgress, setHtmlProgress] = useState(0);
   const [jsProgress, setJsProgress] = useState(0);
@@ -219,15 +253,15 @@ export default function Project() {
               </li>
             </ul>
           </div>
-           <button className="c-btn  ">
-                  <a
-                    href="Entry Level Web Developer Resume.pdf"
-                    download="Piumal_CV"
-                    style={{ textDecoration: "none", color: "#fff" }}
-                  >
-                    Download CV
-                  </a>
-                </button>
+          <button className="c-btn  ">
+            <a
+              href="Entry Level Web Developer Resume.pdf"
+              download="Piumal_CV"
+              style={{ textDecoration: "none", color: "#fff" }}
+            >
+              Download CV
+            </a>
+          </button>
         </div>
       </nav>
       {/* Home Section */}
@@ -239,20 +273,17 @@ export default function Project() {
               data-aos="slide-right"
             >
               <h2 className="mt-5 glow-text">
-               <span className="h">Hello! I Am</span>  <br />
+                <span className="h">Hello! I Am</span> <br />
                 <span className="c-orange">Piumal Harshana</span>
               </h2>
-            
-                <span className="one">And I'm A</span>  <span className="two"> Full-Stack Developer</span><br/> <br/>  <p className="text">having 5 years of experience in expertise of
-                creating website with fully responsive Also with backend part
-                too.
+              <span className="one">And I'm A</span>{" "}
+              <span className="two"> Full-Stack Developer</span>
+              <br /> <br />{" "}
+              <p className="text">
+                having 5 years of experience in expertise of creating website
+                with fully responsive Also with backend part too.
               </p>
-            
-              <button className="h-btn  ">
-                Hire Me
-              </button>
-          
-        
+              <button className="h-btn  ">Hire Me</button>
               <a href="" className="link ms-4 d-none">
                 See My Work
               </a>
@@ -270,57 +301,349 @@ export default function Project() {
       {/* Expertise Section */}
       <section className="expertise mt-5" id="service">
         <div className="container">
-          
-            <small className="about">ABOUT ME</small>
-            
-          
+          <small className="about">ABOUT ME</small>
+
           <div className="row justify-content-evenly mt-5">
             <div className=" " data-aos="fade-up">
               <div className="service-card">
-    
                 <div className="content mt-3">
-
                   <p className="text-muted">
-                  I am an undergraduate at Sabaragamuwa University of Sri Lanka, studying in the Faculty of Computing, Department of Computing and Information Systems.I am an enthusiastic and dedicated individual eager to embark on a rewarding journey as a Trainee. With a strong passion for learning and a commitment to excellence, I am excited about the opportunity to contribute to your team. I believe that my proactive attitude and willingness to embrace challenges will allow me to grow and thrive in this role, while also adding value to your organization. I look forward to the possibility of working together and making a positive impact. 
+                    I am an undergraduate at Sabaragamuwa University of Sri
+                    Lanka, studying in the Faculty of Computing, Department of
+                    Computing and Information Systems.I am an enthusiastic and
+                    dedicated individual eager to embark on a rewarding journey
+                    as a Trainee. With a strong passion for learning and a
+                    commitment to excellence, I am excited about the opportunity
+                    to contribute to your team. I believe that my proactive
+                    attitude and willingness to embrace challenges will allow me
+                    to grow and thrive in this role, while also adding value to
+                    your organization. I look forward to the possibility of
+                    working together and making a positive impact.
                   </p>
-                
                 </div>
               </div>
-            </div>
-            
-        
-          </div>
-        </div>
-      </section>
-      {/* Skills Section */}
-      <section className="skill mt-5 py-5" id="about">
-        <div className="container">
-          <div className="row justify-content-evenly">My Skills
-            <div
-              className="col-10 col-md-5 skill-with-progress"
-              data-aos="slide-right"
-            >
-              <div className="row justify-content-evenly">
-                <div className="col-10 col-md-6">
-                </div>
-    
-              </div>
-              <div className="row justify-content-evenly mt-4">
-                
-             
-              </div>
-            </div>
-            <div className="skill-detail" data-aos="slide-left">
-              <div className="heading mt-5 mt-md-3">
-                
-               
-            
-                
-              </div>{" "}
             </div>
           </div>
         </div>
       </section>{" "}
+      {/* Skills Section */}
+      <section className="skill mt-5 py-5" id="about">
+        <div className="container">
+          <div className="heading text-center mb-5">
+            <small className="text">My Expertise</small>
+            <h3 className="text-white">Technical Skills & Tools</h3>
+          </div>{" "}
+          {/* Web Technologies */}
+          <div className="skill-category mb-5" data-aos="fade-up">
+            <h4 className="category-title glow-text mb-4">
+              <i className="bi bi-code-slash me-2"></i>Web Technologies
+            </h4>
+            <div className="row justify-content-center">
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img src={htmlLogo} alt="HTML5" className="skill-logo" />
+                  </div>
+                  <span>HTML5</span>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img src={cssLogo} alt="CSS3" className="skill-logo" />
+                  </div>
+                  <span>CSS3</span>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img src={jsLogo} alt="JavaScript" className="skill-logo" />
+                  </div>
+                  <span>JavaScript</span>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img src={pythonLogo} alt="Python" className="skill-logo" />
+                  </div>
+                  <span>Python</span>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img src={phpLogo} alt="PHP" className="skill-logo" />
+                  </div>
+                  <span>PHP</span>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img
+                      src={bootstrapLogo}
+                      alt="Bootstrap"
+                      className="skill-logo"
+                    />
+                  </div>
+                  <span>Bootstrap</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Frameworks & Libraries */}
+          <div
+            className="skill-category mb-5"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <h4 className="category-title glow-text mb-4">
+              <i className="bi bi-layers me-2"></i>Frameworks & Libraries
+            </h4>
+            <div className="row justify-content-center">
+              {" "}
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img
+                      src={reactLogo}
+                      alt="React.js"
+                      className="skill-logo"
+                    />
+                  </div>
+                  <span>React.js</span>
+                </div>
+              </div>{" "}
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img
+                      src={laravelLogo}
+                      alt="Laravel"
+                      className="skill-logo"
+                    />
+                  </div>
+                  <span>Laravel</span>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img
+                      src={fastApiLogo}
+                      alt="FastAPI"
+                      className="skill-logo"
+                    />
+                  </div>
+                  <span>Fast API</span>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img
+                      src={nodejsLogo}
+                      alt="Node.js"
+                      className="skill-logo"
+                    />
+                  </div>
+                  <span>Node.js</span>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img
+                      src={expressjsLogo}
+                      alt="Express.js"
+                      className="skill-logo"
+                    />
+                  </div>
+                  <span>Express.js</span>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img
+                      src={tailwindLogo}
+                      alt="Tailwind CSS"
+                      className="skill-logo"
+                    />
+                  </div>
+                  <span>Tailwind</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Databases */}
+          <div
+            className="skill-category mb-5"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <h4 className="category-title glow-text mb-4">
+              <i className="bi bi-database me-2"></i>Databases
+            </h4>
+            <div className="row justify-content-center">
+              {" "}
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img
+                      src={mongodbLogo}
+                      alt="MongoDB"
+                      className="skill-logo"
+                    />
+                  </div>
+                  <span>MongoDB</span>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img src={mysqlLogo} alt="MySQL" className="skill-logo" />
+                  </div>
+                  <span>MySQL</span>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img
+                      src={firebaseLogo}
+                      alt="Firebase"
+                      className="skill-logo"
+                    />
+                  </div>
+                  <span>Firebase</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Design Tools */}
+          <div
+            className="skill-category mb-5"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <h4 className="category-title glow-text mb-4">
+              <i className="bi bi-palette me-2"></i>Design Tools
+            </h4>
+            <div className="row justify-content-center">
+              {" "}
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img src={figmaLogo} alt="Figma" className="skill-logo" />
+                  </div>
+                  <span>Figma</span>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img
+                      src={photoshopLogo}
+                      alt="Photoshop"
+                      className="skill-logo"
+                    />
+                  </div>
+                  <span>Photoshop</span>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img
+                      src={illustratorLogo}
+                      alt="Illustrator"
+                      className="skill-logo"
+                    />
+                  </div>
+                  <span>Illustrator</span>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                      <img
+                      src={canva}
+                      alt="Canva"
+                      className="skill-logo"
+                    />
+                
+                  </div>
+                  <span>Canva</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Other Tools */}
+          <div
+            className="skill-category mb-5"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <h4 className="category-title glow-text mb-4">
+              <i className="bi bi-tools me-2"></i>Other Tools
+            </h4>
+            <div className="row justify-content-center">
+              {" "}
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img src={gitLogo} alt="Git" className="skill-logo" />
+                  </div>
+                  <span>Git</span>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img src={githubLogo} alt="GitHub" className="skill-logo" />
+                  </div>
+                  <span>GitHub</span>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img
+                      src={vscodeLogo}
+                      alt="VS Code"
+                      className="skill-logo"
+                    />
+                  </div>
+                  <span>VS Code</span>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img src={dockerLogo} alt="Docker" className="skill-logo" />
+                  </div>
+                  <span>Docker</span>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-3 col-4 mb-3">
+                <div className="skill-item">
+                  <div className="skill-icon">
+                    <img
+                      src={postmanLogo}
+                      alt="Postman"
+                      className="skill-logo"
+                    />
+                  </div>
+                  <span>Postman</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Portfolio Section */}
       <section className="portfolio" id="portfolio">
         <div className="container">
@@ -787,9 +1110,7 @@ export default function Project() {
                     rows="5"
                   ></textarea>
                 </div>
-                <button className="c-btn h-btn ">
-                  Submit
-                </button>
+                <button className="c-btn h-btn ">Submit</button>
               </div>
             </div>{" "}
           </div>
