@@ -168,11 +168,11 @@ body {
 }
 
 .h-btn{
-     background: var(--gradient-purple);
-  border: none;
+background: var(--gradient-purple);
+  border: 2px solid #6c5ce7;
   color: white;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.s ease;
   box-shadow: var(--box-shadow);
   position: relative;
   overflow: hidden;
@@ -202,13 +202,8 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  transition: left 0.5s;
+ 
+  transition: left 0.1s;
 }
 
 .c-btn:hover::before {
@@ -222,9 +217,8 @@ body {
 }
 
 .h-btn:hover {
- transform: translateY(-4px);
-  box-shadow: var(--box-shadow-hover);
-  background: var(--gradient-secondary);
+ transform: translateY(-1px);
+
 }
 
 
@@ -236,7 +230,7 @@ width: 130px;
 
 .h-btn:hover {
   background: none;
-  border:3px solid ;
+  border: 2px solid #6c5ce7;
 }
 
 /* Section Styles */
@@ -311,6 +305,9 @@ section::before {
   padding: 30px;
   transition: all 0.3s ease;
   box-shadow: var(--box-shadow);
+  width: 1100px;
+  margin: auto;
+ 
 }
 
 .service-card:hover {
@@ -328,6 +325,17 @@ section::before {
 
 .service-card .text-muted {
   color: var(--text-secondary) !important;
+  font-size: 22px;
+  
+}
+.about{
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  text-align: center;
+  color: #6c5ce7;
+  justify-content: center;
+  letter-spacing: 3px;
 }
 
 .link {

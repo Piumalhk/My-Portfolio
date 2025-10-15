@@ -3,7 +3,7 @@ import "./index.css";
 import { usePortfolioEffects } from "./usePortfolioEffects";
 
 // Import images
-import banner01 from "../assets/banner-01.webp";
+import banner01 from "../assets/banner-01.png";
 import serviceIcon1 from "../assets/service-icon1.png";
 import serviceIcon2 from "../assets/service-icon2.png";
 import serviceIcon3 from "../assets/service-icon3.png";
@@ -194,17 +194,17 @@ export default function Project() {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#service">
-                  Service
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#about">
                   About
                 </a>
               </li>
               <li className="nav-item">
+                <a className="nav-link" href="#about">
+                  Skills
+                </a>
+              </li>
+              <li className="nav-item">
                 <a className="nav-link" href="#portfolio">
-                  Portfolio
+                  Projects
                 </a>
               </li>
               <li className="nav-item">
@@ -214,7 +214,7 @@ export default function Project() {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#blog">
-                  Blog
+                  Contact
                 </a>
               </li>
             </ul>
@@ -270,178 +270,51 @@ export default function Project() {
       {/* Expertise Section */}
       <section className="expertise mt-5" id="service">
         <div className="container">
-          <div className="heading text-center">
-            <small>My Expertise</small>
-            <h3>
-              Provide Wide Range of <br />
-              Digital Services
-            </h3>
-          </div>
+          
+            <small className="about">ABOUT ME</small>
+            
+          
           <div className="row justify-content-evenly mt-5">
-            <div className="col-10 col-md-4" data-aos="fade-up">
+            <div className=" " data-aos="fade-up">
               <div className="service-card">
-                <div className="img">
-                  <img
-                    src={serviceIcon1}
-                    className="w-25 img-fluid img"
-                    alt="Web Design"
-                  />
-                </div>
+    
                 <div className="content mt-3">
-                  <h4>Web Design</h4>
+
                   <p className="text-muted">
-                    Dolor repellendus temporibus autem quibusdam officiis
-                    debitis rerum neces aibus minima veniam.
+                  I am an undergraduate at Sabaragamuwa University of Sri Lanka, studying in the Faculty of Computing, Department of Computing and Information Systems.I am an enthusiastic and dedicated individual eager to embark on a rewarding journey as a Trainee. With a strong passion for learning and a commitment to excellence, I am excited about the opportunity to contribute to your team. I believe that my proactive attitude and willingness to embrace challenges will allow me to grow and thrive in this role, while also adding value to your organization. I look forward to the possibility of working together and making a positive impact. 
                   </p>
-                  <a href="" className="link">
-                    Read More
-                  </a>
+                
                 </div>
               </div>
             </div>
-            <div className="col-md-4 col-10" data-aos="fade-up">
-              <div className="service-card">
-                <div className="img">
-                  <img
-                    src={serviceIcon2}
-                    className="w-25 img-fluid img"
-                    alt="Web Development"
-                  />
-                </div>
-                <div className="content mt-3">
-                  <h4>Web Development</h4>
-                  <p className="text-muted">
-                    Dolor repellendus temporibus autem quibusdam officiis
-                    debitis rerum neces aibus minima veniam.
-                  </p>
-                  <a href="" className="link">
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 col-10" data-aos="fade-up">
-              <div className="service-card">
-                <div className="img">
-                  <img
-                    src={serviceIcon3}
-                    className="w-25 img-fluid img"
-                    alt="Debugging"
-                  />
-                </div>
-                <div className="content mt-3">
-                  <h4>Debugging</h4>
-                  <p className="text-muted">
-                    Dolor repellendus temporibus autem quibusdam officiis
-                    debitis rerum neces aibus minima veniam.
-                  </p>
-                  <a href="" className="link">
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>{" "}
+            
+        
           </div>
         </div>
       </section>
       {/* Skills Section */}
       <section className="skill mt-5 py-5" id="about">
         <div className="container">
-          <div className="row justify-content-evenly">
+          <div className="row justify-content-evenly">My Skills
             <div
               className="col-10 col-md-5 skill-with-progress"
               data-aos="slide-right"
             >
               <div className="row justify-content-evenly">
                 <div className="col-10 col-md-6">
-                  <div className="progress-card ms-3 ms-md-0">
-                    <div
-                      className="circular-progress html-css"
-                      style={{
-                        background: `conic-gradient(#fca61f ${
-                          htmlProgress * 3.6
-                        }deg, #ededed 0deg)`,
-                      }}
-                    >
-                      <span className="progress-value html-progress">
-                        {htmlProgress}%
-                      </span>
-                    </div>
-                    <br />
-                    <span className="text">HTML & CSS</span>
-                  </div>
                 </div>
-                <div className="col-10 col-md-6 mt-4 mt-md-0">
-                  <div className="progress-card ms-3 ms-md-0">
-                    <div
-                      className="circular-progress javascript"
-                      style={{
-                        background: `conic-gradient(#7d2ae8 ${
-                          jsProgress * 3.6
-                        }deg, #ededed 0deg)`,
-                      }}
-                    >
-                      <span className="progress-value javascript-progress">
-                        {jsProgress}%
-                      </span>
-                    </div>
-                    <br />
-                    <span className="text">JavaScript</span>
-                  </div>
-                </div>
+    
               </div>
               <div className="row justify-content-evenly mt-4">
-                <div className="col-10 col-md-6">
-                  <div className="progress-card ms-3 ms-md-0">
-                    <div
-                      className="circular-progress php"
-                      style={{
-                        background: `conic-gradient(#20bf6b ${
-                          phpProgress * 3.6
-                        }deg, #ededed 0deg)`,
-                      }}
-                    >
-                      <span className="progress-value php-progress">
-                        {phpProgress}%
-                      </span>
-                    </div>
-                    <br />
-                    <span className="text">PHP</span>
-                  </div>
-                </div>
-                <div className="col-10 col-md-6 mt-4 mt-md-0">
-                  <div className="progress-card ms-3 ms-md-0">
-                    <div
-                      className="circular-progress reactjs"
-                      style={{
-                        background: `conic-gradient(#3742fa ${
-                          reactProgress * 3.6
-                        }deg, #ededed 0deg)`,
-                      }}
-                    >
-                      <span className="progress-value reactjs-progress">
-                        {reactProgress}%
-                      </span>
-                    </div>
-                    <br />
-                    <span className="text">ReactJS</span>
-                  </div>
-                </div>
+                
+             
               </div>
             </div>
-            <div className="col-10 col-md-5 skill-detail" data-aos="slide-left">
+            <div className="skill-detail" data-aos="slide-left">
               <div className="heading mt-5 mt-md-3">
-                <small>My Skills</small>
-                <h3>Beautiful & Unique Digital Experiences</h3>
-                <p className="text-muted">
-                  Nostrum exercitationem ullam corporis suscipit laborioa nisi
-                  ut aliquid exrea commodi consequatur magni dolores aos qui
-                  ratione voluptatem nesciunt.
-                </p>
-                <p className="text-muted">
-                  Quia voluptas sit aspernatur aut odit aut fugit, sed ruiano
-                  consequntar magni dolores.
-                </p>
+                
+               
+            
                 
               </div>{" "}
             </div>
@@ -914,7 +787,7 @@ export default function Project() {
                     rows="5"
                   ></textarea>
                 </div>
-                <button className="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+                <button className="c-btn h-btn ">
                   Submit
                 </button>
               </div>
@@ -960,7 +833,7 @@ export default function Project() {
           </button>
         </div>
         <hr className="text-muted my-4" />
-        <p>Copyright 2022 Portfolio | All Rights Reserved.</p>
+        <p>Copyright 2025 Piumal Harshana Portfolio | All Rights Reserved.</p>
       </footer>
     </div>
   );
