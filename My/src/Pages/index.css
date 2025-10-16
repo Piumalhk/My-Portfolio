@@ -1533,10 +1533,101 @@ section::before {
   box-shadow: var(--box-shadow);
 }
 
-#btn-back-to-top:hover {
+/* Professional Back to Top Button */
+#btn-back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 55px;
+  height: 55px;
+  background: var(--gradient-purple);
+  color: var(--text-primary);
+  border: 2px solid rgba(108, 92, 231, 0.3);
+  border-radius: 50%;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  z-index: 1000;
+  box-shadow: 0 8px 25px rgba(108, 92, 231, 0.2);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+}
+
+#btn-back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#btn-back-to-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
   background: var(--gradient-secondary);
-  transform: translateY(-3px);
-  box-shadow: var(--box-shadow-hover);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+#btn-back-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(108, 92, 231, 0.4);
+  border-color: var(--accent-cyan);
+}
+
+#btn-back-to-top:hover::before {
+  opacity: 1;
+}
+
+#btn-back-to-top:hover i {
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+#btn-back-to-top i {
+  transition: all 0.3s ease;
+  font-size: 1.3rem;
+}
+
+#btn-back-to-top:active {
+  transform: translateY(-2px) scale(0.95);
+}
+
+/* Pulse animation for attention */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 8px 25px rgba(108, 92, 231, 0.2);
+  }
+  50% {
+    box-shadow: 0 8px 25px rgba(108, 92, 231, 0.4);
+  }
+  100% {
+    box-shadow: 0 8px 25px rgba(108, 92, 231, 0.2);
+  }
+}
+
+#btn-back-to-top.pulse {
+  animation: pulse-glow 2s infinite;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #btn-back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.1rem;
+  }
 }
 
 /* Heading Styles */

@@ -174,11 +174,24 @@ export default function Project() {
         }
         return prev + 1;
       });
-    }, 30);
-
-    // Back to top button functionality
+    }, 30); // Enhanced Back to top button functionality
     const handleBackToTop = () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    const handleScroll = () => {
+      const backToTopBtn = document.getElementById("btn-back-to-top");
+      if (backToTopBtn) {
+        if (window.pageYOffset > 300) {
+          backToTopBtn.classList.add("show");
+          // Add pulse effect when user scrolls down significantly
+          if (window.pageYOffset > 800) {
+            backToTopBtn.classList.add("pulse");
+          }
+        } else {
+          backToTopBtn.classList.remove("show", "pulse");
+        }
+      }
     };
 
     const backToTopBtn = document.getElementById("btn-back-to-top");
@@ -186,7 +199,11 @@ export default function Project() {
       backToTopBtn.addEventListener("click", handleBackToTop);
     }
 
-    // Cleanup function
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Initial check
+    handleScroll(); // Cleanup function
     return () => {
       clearInterval(htmlTimer);
       clearInterval(jsTimer);
@@ -195,6 +212,7 @@ export default function Project() {
       if (backToTopBtn) {
         backToTopBtn.removeEventListener("click", handleBackToTop);
       }
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -1135,7 +1153,6 @@ export default function Project() {
                 </div>
 
                 {/* Newsletter */}
-               
               </div>
             </div>
           </div>
