@@ -1699,29 +1699,48 @@ img {
   box-shadow: 0 0 20px rgba(108, 92, 231, 0.5);
 }
 
-/* Professional Profile Frame */
+/* Animated Circular Profile Frame */
 .profile-frame {
   position: relative;
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  padding: 7px;
   margin-left: 40px;
+  padding: 8px;
+  border-radius: 50%;
 }
 
+/* Animated Border Effect */
 .profile-frame::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--gradient-purple);
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  background: #1a365d;
   border-radius: 50%;
-  z-index: -1;
-  animation: rotateFrame 8s linear infinite;
+  z-index: -2;
+  animation: energyFlow 3s linear infinite;
+  filter: blur(1px);
 }
 
+/* Secondary rotating border for enhanced effect */
+.profile-frame::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: radial-gradient(circle, #2d5aa0 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+  animation: energyFlowReverse 4s linear infinite;
+  opacity: 0.7;
+}
+
+/* Inner container for the image */
 .profile-inner {
   position: relative;
   width: 100%;
@@ -1729,40 +1748,198 @@ img {
   border-radius: 50%;
   overflow: hidden;
   background: var(--gradient-dark);
+  border: 1px solid rgba(15, 15, 35, 0.9);
+  z-index: 1;
 }
 
+/* Profile image with smooth scaling */
 .profile-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  transition: transform 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(1.05) contrast(1.1);
 }
 
+/* Enhanced hover effects */
 .profile-frame:hover .profile-image {
   transform: scale(1.08);
+  filter: brightness(1.1) contrast(1.15) saturate(1.1);
 }
 
-/* Animation Keyframes */
-@keyframes rotateFrame {
+.profile-frame:hover::before {
+  animation-duration: 1.5s;
+  filter: blur(0.5px);
+}
+
+.profile-frame:hover::after {
+  animation-duration: 2s;
+  opacity: 0.9;
+}
+
+/* Main Energy Flow Animation */
+@keyframes energyFlow {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.02);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(1);
   }
 }
 
-/* Responsive adjustments */
+/* Reverse Energy Flow Animation */
+@keyframes energyFlowReverse {
+  0% {
+    transform: rotate(360deg) scale(1.01);
+    opacity: 0.7;
+  }
+  25% {
+    opacity: 0.9;
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+    opacity: 0.6;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(0deg) scale(1.01);
+    opacity: 0.7;
+  }
+}
+
+/* Pulsing glow effect */
+@keyframes glowPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(26, 54, 93, 0.4), 0 0 40px rgba(45, 90, 160, 0.3),
+      inset 0 0 20px rgba(26, 54, 93, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(26, 54, 93, 0.6), 0 0 60px rgba(45, 90, 160, 0.4),
+      inset 0 0 30px rgba(26, 54, 93, 0.3);
+  }
+}
+
+/* Apply glow animation to the frame */
+.profile-frame {
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+/* Advanced Responsive Design */
+@media (max-width: 1200px) {
+  .profile-frame {
+    max-width: 350px;
+    margin-left: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .profile-frame {
-    max-width: 250px;
-    padding: 15px;
+    max-width: 280px;
+    margin-left: 0;
+    padding: 6px;
+  }
+
+  .profile-frame::before {
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+  }
+
+  .profile-frame::after {
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
   }
 
   .profile-inner {
-    padding: 6px;
+    border: 2px solid rgba(15, 15, 35, 0.9);
   }
+}
+
+@media (max-width: 480px) {
+  .profile-frame {
+    max-width: 220px;
+    padding: 4px;
+  }
+
+  /* Reduce animation intensity on smaller screens */
+  .profile-frame::before {
+    animation-duration: 4s;
+  }
+
+  .profile-frame::after {
+    animation-duration: 5s;
+  }
+}
+
+/* Accessibility and Performance */
+@media (prefers-reduced-motion: reduce) {
+  .profile-frame::before,
+  .profile-frame::after,
+  .profile-frame {
+    animation: none;
+  }
+
+  .profile-image {
+    transition: transform 0.2s ease;
+  }
+
+  .profile-frame:hover .profile-image {
+    transform: scale(1.05);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .profile-frame::before {
+    background: conic-gradient(
+      from 0deg,
+      #ffffff 0deg,
+      #000000 90deg,
+      #ffffff 180deg,
+      #000000 270deg,
+      #ffffff 360deg
+    );
+  }
+
+  .profile-frame::after {
+    background: conic-gradient(
+      from 180deg,
+      transparent 0deg,
+      #ffffff 60deg,
+      transparent 120deg,
+      #000000 240deg,
+      transparent 300deg,
+      #ffffff 360deg
+    );
+  }
+}
+
+/* Focus styles for accessibility */
+.profile-frame:focus-within {
+  outline: 3px solid var(--accent-cyan);
+  outline-offset: 5px;
+}
+
+/* Additional modern effects */
+.profile-frame:active {
+  transform: scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+/* Particle effect on hover (optional enhancement) */
+.profile-frame:hover::before {
+  box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.4),
+    0 0 0 6px rgba(108, 92, 231, 0.2), 0 0 0 12px rgba(108, 92, 231, 0.1);
 }
 
 .project-description {
