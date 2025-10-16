@@ -1157,9 +1157,9 @@ footer h3 {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(108, 92, 231, 0.3);
 }
-:.frame  {
-  border: 3px solid #6c5ce7;
-  padding: 10px;
+.frame  {
+  border: 1px solid #6c5ce7;
+  padding: 40px;
   border-radius: 50%;
   margin-left: 80px;
 }
@@ -1259,7 +1259,8 @@ img {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 7px;
+  margin-left: 40px;
 }
 
 .profile-frame::before {

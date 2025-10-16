@@ -253,7 +253,7 @@ export default function Project() {
           </div>
           <button className="c-btn  ">
             <a
-              href="Entry Level Web Developer Resume.pdf"
+              href="21CIS0008_Piumal.pdf"
               download="Piumal_CV"
               style={{ textDecoration: "none", color: "#fff" }}
             >
@@ -290,7 +290,7 @@ export default function Project() {
               {/* Social Buttons */}
               <div className="social-buttons mt-3">
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/piumalhk"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-btn github-btn"
@@ -299,7 +299,7 @@ export default function Project() {
                   <i className="bi bi-github"></i>
                 </a>
                 <a
-                  href="https://linkedin.com/in/yourusername"
+                  href="https://linkedin.com/in/piumal-harshana-71b968302"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-btn linkedin-btn"
