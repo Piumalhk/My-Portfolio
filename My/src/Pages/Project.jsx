@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./index.css";
 import { usePortfolioEffects } from "./usePortfolioEffects";
+import emailjs from "@emailjs/browser";
 
 // Import images
 import banner01 from "../assets/banner-01.jpg";
@@ -57,10 +58,52 @@ export default function Project() {
   const [phpProgress, setPhpProgress] = useState(0);
   const [reactProgress, setReactProgress] = useState(0);
 
+  // Contact form states
+  const form = useRef();
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
   // Use custom hook for portfolio effects
   usePortfolioEffects();
-
   useEffect(() => {
+    // Contact form email function
+    const sendEmail = (e) => {
+      e.preventDefault();
+      setIsLoading(true);
+      setMessage("");
+
+      // EmailJS configuration
+      const serviceID = "service_gpm5t3g"; // Your service ID
+      const templateID = "template_3ttpcw2"; // Your template ID
+      const publicKey = "l3gHoMfIajcedQeSl"; // Your public key
+
+      emailjs
+        .sendForm(serviceID, templateID, form.current, {
+          publicKey: publicKey,
+        })
+        .then(
+          () => {
+            console.log("SUCCESS!");
+            setMessage("Message sent successfully! I'll get back to you soon.");
+            setIsLoading(false);
+            form.current.reset(); // Clear the form
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+            setMessage(
+              "Failed to send message. Please try again or contact me directly."
+            );
+            setIsLoading(false);
+          }
+        );
+    };
+
+    // Add event listener to contact form
+    const contactForm = document.getElementById("contact-form");
+    if (contactForm) {
+      contactForm.addEventListener("submit", sendEmail);
+    }
+
     // Add external stylesheets and scripts
     const addExternalResources = () => {
       // Bootstrap CSS
@@ -213,6 +256,12 @@ export default function Project() {
         backToTopBtn.removeEventListener("click", handleBackToTop);
       }
       window.removeEventListener("scroll", handleScroll);
+
+      // Remove contact form event listener
+      const contactForm = document.getElementById("contact-form");
+      if (contactForm) {
+        contactForm.removeEventListener("submit", sendEmail);
+      }
     };
   }, []);
 
@@ -971,42 +1020,77 @@ export default function Project() {
                   <p>piumal.bcc@gmail.com</p>
                 </div>
               </div>
-            </div>
+            </div>{" "}
             <div className="col-md-5 col-10 mt-3 mt-md-0" data-aos="slide-left">
               <div className="contact-form">
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="contactName"
-                    placeholder="Name"
-                  />
-                </div>
-                <div className="mb-3">
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="contactEmail"
-                    placeholder="E-mail"
-                  />
-                </div>
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="contactMobile"
-                    placeholder="Mobile No."
-                  />
-                </div>
-                <div className="mb-3">cd
-                  <textarea
-                    className="form-control"
-                    id="contactMessage"
-                    placeholder="Message"
-                    rows="5"
-                  ></textarea>
-                </div>
-                <button className="c-btn h-btn ">Send</button>
+                <form ref={form} id="contact-form">
+                  <div className="mb-3">
+                    <input
+                      type="text"
+                      name="user_name"
+                      className="form-control"
+                      placeholder="Name"
+                      required
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <input
+                      type="email"
+                      name="user_email"
+                      className="form-control"
+                      placeholder="E-mail"
+                      required
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <input
+                      type="text"
+                      name="user_phone"
+                      className="form-control"
+                      placeholder="Mobile No."
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <textarea
+                      name="message"
+                      className="form-control"
+                      placeholder="Message"
+                      rows="5"
+                      required
+                    ></textarea>
+                  </div>
+
+                  {message && (
+                    <div
+                      className={`alert ${
+                        message.includes("successfully")
+                          ? "alert-success"
+                          : "alert-danger"
+                      } mb-3`}
+                    >
+                      {message}
+                    </div>
+                  )}
+
+                  <button
+                    type="submit"
+                    className="c-btn h-btn"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? (
+                      <>
+                        <span
+                          className="spinner-border spinner-border-sm me-2"
+                          role="status"
+                          aria-hidden="true"
+                        ></span>
+                        Sending...
+                      </>
+                    ) : (
+                      "Send"
+                    )}
+                  </button>
+                </form>
               </div>
             </div>{" "}
           </div>
