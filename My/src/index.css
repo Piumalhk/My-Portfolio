@@ -89,21 +89,7 @@ body{
     transform-origin: bottom left;
 }
 /* adding animation to home section image  */
-.home img{
-    animation: floatimg 4s ease-in-out infinite;
-}
 
-@keyframes floatimg {
-    0%{
-        transform: translateX(0);
-    }
-    50%{
-        transform: translateX(-24px);
-    }
-    100%{
-        transform: translateX(0);
-    }
-}
 
 /* expertise section starts */
 .heading small{

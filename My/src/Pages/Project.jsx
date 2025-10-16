@@ -3,7 +3,7 @@ import "./index.css";
 import { usePortfolioEffects } from "./usePortfolioEffects";
 
 // Import images
-import banner01 from "../assets/banner-01.png";
+import banner01 from "../assets/banner-01.jpg";
 import serviceIcon1 from "../assets/service-icon1.png";
 import serviceIcon2 from "../assets/service-icon2.png";
 import serviceIcon3 from "../assets/service-icon3.png";
@@ -243,7 +243,7 @@ export default function Project() {
                   Projects
                 </a>
               </li>
-             
+
               <li className="nav-item">
                 <a className="nav-link" href="#contact">
                   Contact
@@ -270,7 +270,8 @@ export default function Project() {
               className="col-10 col-md-6 text-center text-md-start"
               data-aos="slide-right"
             >
-              <h2 className="mt-5 glow-text">
+              {" "}
+              <h2 className="mt-2 glow-text">
                 <span className="h">Hello! I Am</span> <br />
                 <span className="c-orange">Piumal Harshana</span>
               </h2>
@@ -282,16 +283,45 @@ export default function Project() {
                 interactive, user-friendly digital experiences. I focus on
                 building creative and functional solutions that combine design,
                 usability, and performance.
-              </p>
-              <button className="h-btn  "><a href="#contact">Hire Me</a></button>
-             
+              </p>{" "}
+              <button className="h-btn  ">
+                <a href="#contact">Hire Me</a>
+              </button>{" "}
+              {/* Social Buttons */}
+              <div className="social-buttons mt-3">
+                <a
+                  href="https://github.com/yourusername"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-btn github-btn"
+                  title="GitHub"
+                >
+                  <i className="bi bi-github"></i>
+                </a>
+                <a
+                  href="https://linkedin.com/in/yourusername"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-btn linkedin-btn"
+                  title="LinkedIn"
+                >
+                  <i className="bi bi-linkedin"></i>
+                </a>
+              </div>
             </div>{" "}
-            <div className="col-10 col-md-4 d-none d-md-block">
-              <img
-                src={banner01}
-                className="img-fluid floating glow-border"
-                alt="Banner"
-              />
+            <div
+              className="col-10 col-md-4 d-none d-md-block "
+              data-aos="slide-left"
+            >
+              <div className="profile-frame">
+                <div className="profile-inner">
+                  <img
+                    src={banner01}
+                    className="img-fluid profile-image"
+                    alt="Banner"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -759,7 +789,6 @@ export default function Project() {
                       <span className="tech-tag">Node.js</span>
                       <span className="tech-tag">Express.js</span>
                       <span className="tech-tag">MongoDB</span>
-                      
                     </div>
                   </div>
                 </div>
@@ -830,7 +859,7 @@ export default function Project() {
                   <div className="project-content">
                     <h4 className="project-title">
                       HealLink - Caretaker Management System
-                    </h4>
+                    </h4>{" "}
                     <p className="project-description">
                       A web-based solution for nursing services to automate
                       caretaker scheduling, store digital records, and enable
@@ -888,8 +917,6 @@ export default function Project() {
           </div>
         </div>
       </section>{" "}
-      
-      
       {/* Contact Section */}
       <section className="contact py-5" id="contact">
         <div className="container">
