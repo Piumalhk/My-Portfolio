@@ -707,7 +707,7 @@ export default function Project() {
                     <div className="project-overlay">
                       <div className="project-links">
                         <a
-                          href="#"
+                          href="#https://github.com/naveensanjula975/VocalGuard.git"
                           className="github-link"
                           title="View on GitHub"
                         >
@@ -746,7 +746,7 @@ export default function Project() {
                     <div className="project-overlay">
                       <div className="project-links">
                         <a
-                          href="#"
+                          href="#https://github.com/Piumalhk/Sabra-Music.git"
                           className="github-link"
                           title="View on GitHub"
                         >
@@ -786,7 +786,7 @@ export default function Project() {
                     <div className="project-overlay">
                       <div className="project-links">
                         <a
-                          href="#"
+                          href="https://github.com/Piumalhk/Student-Portal.git"
                           className="github-link"
                           title="View on GitHub"
                         >
@@ -825,7 +825,7 @@ export default function Project() {
                     <div className="project-overlay">
                       <div className="project-links">
                         <a
-                          href="#"
+                          href="https://github.com/Piumalhk/TruthiFy.git"
                           className="github-link"
                           title="View on GitHub"
                         >
@@ -865,7 +865,7 @@ export default function Project() {
                     <div className="project-overlay">
                       <div className="project-links">
                         <a
-                          href="#"
+                          href="#https://github.com/nadunthilina/HealLink.git"
                           className="github-link"
                           title="View on GitHub"
                         >
@@ -904,7 +904,7 @@ export default function Project() {
                     <div className="project-overlay">
                       <div className="project-links">
                         <a
-                          href="#"
+                          href="https://github.com/Piumalhk/SLTB-TransitEase.git"
                           className="github-link"
                           title="View on GitHub"
                         >
@@ -998,7 +998,7 @@ export default function Project() {
                     placeholder="Mobile No."
                   />
                 </div>
-                <div className="mb-3">
+                <div className="mb-3">cd
                   <textarea
                     className="form-control"
                     id="contactMessage"
@@ -1006,7 +1006,7 @@ export default function Project() {
                     rows="5"
                   ></textarea>
                 </div>
-                <button className="c-btn h-btn ">Submit</button>
+                <button className="c-btn h-btn ">Send</button>
               </div>
             </div>{" "}
           </div>
