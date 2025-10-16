@@ -7,12 +7,14 @@ import banner01 from "../assets/banner-01.png";
 import serviceIcon1 from "../assets/service-icon1.png";
 import serviceIcon2 from "../assets/service-icon2.png";
 import serviceIcon3 from "../assets/service-icon3.png";
-import game2048 from "../assets/2048game.png";
-import currencyConverter from "../assets/currency-converter.png";
-import dictionary from "../assets/dictionary.png";
-import piceditor from "../assets/piceditor.png";
-import tictactoe from "../assets/tictactoe.png";
-import langTranslator from "../assets/lang-translator.png";
+
+// Project images
+import vocalGuardImg from "../assets/VocalGuard.png";
+import sabraMusicImg from "../assets/Sabramusic.png";
+import studentPortalImg from "../assets/student portal.png";
+import truthiFyImg from "../assets/TrutiFy.png";
+import healLinkImg from "../assets/HealLink.png";
+import sltbTransitImg from "../assets/SLTB-TransitEase.png";
 import testimonialsImg from "../assets/tastimonials-img.png";
 
 // Import SVG logos for technologies
@@ -241,13 +243,9 @@ export default function Project() {
                   Projects
                 </a>
               </li>
+             
               <li className="nav-item">
-                <a className="nav-link" href="#testimonial">
-                  Testimonials
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#blog">
+                <a className="nav-link" href="#contact">
                   Contact
                 </a>
               </li>
@@ -279,14 +277,14 @@ export default function Project() {
               <span className="one">And I'm A</span>{" "}
               <span className="two"> Full-Stack Developer</span>
               <br /> <br />{" "}
-              <p className="text">
-                having 5 years of experience in expertise of creating website
-                with fully responsive Also with backend part too.
+              <p className="text1">
+                I’m a passionate developer who loves turning ideas into
+                interactive, user-friendly digital experiences. I focus on
+                building creative and functional solutions that combine design,
+                usability, and performance.
               </p>
-              <button className="h-btn  ">Hire Me</button>
-              <a href="" className="link ms-4 d-none">
-                See My Work
-              </a>
+              <button className="h-btn  "><a href="#contact">Hire Me</a></button>
+             
             </div>{" "}
             <div className="col-10 col-md-4 d-none d-md-block">
               <img
@@ -569,12 +567,7 @@ export default function Project() {
               <div className="col-lg-2 col-md-3 col-4 mb-3">
                 <div className="skill-item">
                   <div className="skill-icon">
-                      <img
-                      src={canva}
-                      alt="Canva"
-                      className="skill-logo"
-                    />
-                
+                    <img src={canva} alt="Canva" className="skill-logo" />
                   </div>
                   <span>Canva</span>
                 </div>
@@ -647,198 +640,247 @@ export default function Project() {
       {/* Portfolio Section */}
       <section className="portfolio" id="portfolio">
         <div className="container">
-          <div className="heading text-center pt-5">
+          <div className="heading text-center pt-2">
             <small>Creative Work</small>
-            <h3>Check My Portfolio</h3>
+            <h3>Check My Latest Projects</h3>
           </div>
 
-          <div id="myBtnContainer" className="text-center mt-4">
-            <button className="filter-item" data-filter="all">
-              All
-            </button>
-            <button className="filter-item" data-filter="game">
-              Game
-            </button>
-            <button className="filter-item" data-filter="webapp">
-              Web App
-            </button>
-            <button className="filter-item" data-filter="website">
-              Website
-            </button>
-            <button className="filter-item" data-filter="brand">
-              Brand
-            </button>
-          </div>
-
-          <div className="portfolio-body">
-            <div className="row justify-content-evenly px-4">
-              <div
-                className="post col-md-4 game all col-10 mt-3 mt-md-0"
-                data-aos="fade-up"
-              >
-                <div className="card">
-                  <img
-                    src={game2048}
-                    className="card-img-top"
-                    alt="2048 Game"
-                  />
-                  <div className="card-body text-center">
-                    <h4 className="card-title">2048 Game</h4>
-                    <span className="badge bg-secondary badge-pill">
-                      HTML&CSS
-                    </span>
-                    <span className="badge bg-secondary badge-pill">
-                      JavaScript
-                    </span>
-                    <span className="badge bg-secondary badge-pill mb-2">
-                      Game
-                    </span>
-                    <br />
-                    <a href="#" className="link">
-                      Read More
-                    </a>
+          <div className="portfolio-body ">
+            <div className="row justify-content-center g-4 ">
+              {" "}
+              <div className="col-lg-4 col-md-6 col-12 " data-aos="fade-up">
+                <div className="project-card">
+                  <div className="project-image">
+                    <img
+                      src={vocalGuardImg}
+                      className="card-img-top"
+                      alt="VocalGuard Project"
+                    />
+                    <div className="project-overlay">
+                      <div className="project-links">
+                        <a
+                          href="#"
+                          className="github-link"
+                          title="View on GitHub"
+                        >
+                          <i className="bi bi-github"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="project-content">
+                    <h4 className="project-title">
+                      VocalGuard - Deepfake Audio Detection System
+                    </h4>
+                    <p className="project-description">
+                      VocalGuard is an AI-powered web application for detecting
+                      audio deepfakes. Using advanced Transformer models, it
+                      analyzes uploaded audio files to identify manipulation
+                      with high accuracy.
+                    </p>
+                    <div className="project-tech">
+                      <span className="tech-tag">React.js</span>
+                      <span className="tech-tag">Python</span>
+                      <span className="tech-tag">Firebase</span>
+                      <span className="tech-tag">Firestore</span>
+                    </div>
+                  </div>
+                </div>
+              </div>{" "}
+              <div className="col-lg-4 col-md-6 col-12" data-aos="fade-up">
+                <div className="project-card">
+                  <div className="project-image">
+                    <img
+                      src={sabraMusicImg}
+                      className="card-img-top"
+                      alt="Sabra Music Project"
+                    />
+                    <div className="project-overlay">
+                      <div className="project-links">
+                        <a
+                          href="#"
+                          className="github-link"
+                          title="View on GitHub"
+                        >
+                          <i className="bi bi-github"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="project-content">
+                    <h4 className="project-title">
+                      Sabra Music - University Art Center Booking System
+                    </h4>
+                    <p className="project-description">
+                      The Art Center Booking System is a web app for
+                      Sabaragamuwa University that lets students book practice
+                      slots online, check availability, and upload approval
+                      letters.
+                    </p>
+                    <div className="project-tech">
+                      <span className="tech-tag">HTML</span>
+                      <span className="tech-tag">CSS</span>
+                      <span className="tech-tag">Laravel</span>
+                      <span className="tech-tag">PHP</span>
+                      <span className="tech-tag">MySQL</span>
+                    </div>
+                  </div>
+                </div>
+              </div>{" "}
+              <div className="col-lg-4 col-md-6 col-12" data-aos="fade-up">
+                <div className="project-card">
+                  <div className="project-image">
+                    <img
+                      src={studentPortalImg}
+                      className="card-img-top"
+                      alt="Student Portal Project"
+                    />
+                    <div className="project-overlay">
+                      <div className="project-links">
+                        <a
+                          href="#"
+                          className="github-link"
+                          title="View on GitHub"
+                        >
+                          <i className="bi bi-github"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="project-content">
+                    <h4 className="project-title">Student Portal</h4>
+                    <p className="project-description">
+                      A modern full-stack web application that serves as a
+                      comprehensive student portal system with separate admin
+                      and user interfaces for feedback and announcements.
+                    </p>
+                    <div className="project-tech">
+                      <span className="tech-tag">React.js</span>
+                      <span className="tech-tag">Node.js</span>
+                      <span className="tech-tag">Express.js</span>
+                      <span className="tech-tag">MongoDB</span>
+                      
+                    </div>
                   </div>
                 </div>
               </div>
-              <div
-                className="post col-md-4 website all col-10 mt-3 mt-md-0"
-                data-aos="fade-up"
-              >
-                <div className="card">
-                  <img
-                    src={currencyConverter}
-                    className="card-img-top"
-                    alt="Currency Converter"
-                  />
-                  <div className="card-body text-center">
-                    <h4 className="card-title">Converter App</h4>
-                    <span className="badge bg-secondary badge-pill">
-                      HTML&CSS
-                    </span>
-                    <span className="badge bg-secondary badge-pill">
-                      JavaScript
-                    </span>
-                    <span className="badge bg-secondary badge-pill mb-2">
-                      Website
-                    </span>
-                    <br />
-                    <a href="#" className="read-more-btn link">
-                      Read More
-                    </a>
+            </div>{" "}
+            <div className="row justify-content-center g-4 mt-4">
+              {" "}
+              <div className="col-lg-4 col-md-6 col-12" data-aos="fade-up">
+                <div className="project-card">
+                  <div className="project-image">
+                    <img
+                      src={truthiFyImg}
+                      className="card-img-top"
+                      alt="TruthiFy Project"
+                    />
+                    <div className="project-overlay">
+                      <div className="project-links">
+                        <a
+                          href="#"
+                          className="github-link"
+                          title="View on GitHub"
+                        >
+                          <i className="bi bi-github"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="project-content">
+                    <h4 className="project-title">
+                      TruthiFy - Fake News Detection Web Application
+                    </h4>
+                    <p className="project-description">
+                      A Fake News Detection Web App with FastAPI backend and
+                      React frontend, using pre-trained transformer models to
+                      classify news articles as real or fake with instant
+                      predictions.
+                    </p>
+                    <div className="project-tech">
+                      <span className="tech-tag">React.js</span>
+                      <span className="tech-tag">FastAPI</span>
+                      <span className="tech-tag">Python</span>
+                      <span className="tech-tag">MongoDB</span>
+                      <span className="tech-tag">Tailwind CSS</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div
-                className="post col-md-4 webapp all col-10 mt-3 mt-md-0"
-                data-aos="fade-up"
-              >
-                <div className="card">
-                  <img
-                    src={dictionary}
-                    className="card-img-top"
-                    alt="Dictionary"
-                  />
-                  <div className="card-body text-center">
-                    <h4 className="card-title">Dictionary</h4>
-                    <span className="badge bg-secondary badge-pill">
-                      HTML&CSS
-                    </span>
-                    <span className="badge bg-secondary badge-pill">
-                      JavaScript
-                    </span>
-                    <span className="badge bg-secondary badge-pill mb-2">
-                      WebApp
-                    </span>
-                    <br />
-                    <a href="#" className="read-more-btn link">
-                      Read More
-                    </a>
+              </div>{" "}
+              <div className="col-lg-4 col-md-6 col-12" data-aos="fade-up">
+                <div className="project-card">
+                  <div className="project-image">
+                    <img
+                      src={healLinkImg}
+                      className="card-img-top"
+                      alt="HealLink Project"
+                    />
+                    <div className="project-overlay">
+                      <div className="project-links">
+                        <a
+                          href="#"
+                          className="github-link"
+                          title="View on GitHub"
+                        >
+                          <i className="bi bi-github"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="project-content">
+                    <h4 className="project-title">
+                      HealLink - Caretaker Management System
+                    </h4>
+                    <p className="project-description">
+                      A web-based solution for nursing services to automate
+                      caretaker scheduling, store digital records, and enable
+                      smooth communication among all stakeholders.
+                    </p>
+                    <div className="project-tech">
+                      <span className="tech-tag">React.js</span>
+                      <span className="tech-tag">Node.js</span>
+                      <span className="tech-tag">Express.js</span>
+                      <span className="tech-tag">MongoDB</span>
+                      <span className="tech-tag">Tailwind CSS</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="row justify-content-evenly mt-4 px-4">
-              <div
-                className="post col-md-4 game all col-10 mt-3 mt-md-0"
-                data-aos="fade-up"
-              >
-                <div className="card">
-                  <img
-                    src={piceditor}
-                    className="card-img-top"
-                    alt="Pic Editor"
-                  />
-                  <div className="card-body text-center">
-                    <h4 className="card-title">PicEditor App</h4>
-                    <span className="badge bg-secondary badge-pill">
-                      HTML&CSS
-                    </span>
-                    <span className="badge bg-secondary badge-pill">
-                      JavaScript
-                    </span>
-                    <span className="badge bg-secondary badge-pill mb-2">
-                      App
-                    </span>
-                    <br />
-                    <a href="#" className="read-more-btn link">
-                      Read More
-                    </a>
+              </div>{" "}
+              <div className="col-lg-4 col-md-6 col-12" data-aos="fade-up">
+                <div className="project-card">
+                  <div className="project-image">
+                    <img
+                      src={sltbTransitImg}
+                      className="card-img-top"
+                      alt="SLTB-TransitEase Project"
+                    />
+                    <div className="project-overlay">
+                      <div className="project-links">
+                        <a
+                          href="#"
+                          className="github-link"
+                          title="View on GitHub"
+                        >
+                          <i className="bi bi-github"></i>
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div
-                className="post col-md-4 website all col-10 mt-3 mt-md-0"
-                data-aos="fade-up"
-              >
-                <div className="card">
-                  <img
-                    src={tictactoe}
-                    className="card-img-top"
-                    alt="Tic Tac Toe"
-                  />
-                  <div className="card-body text-center">
-                    <h4 className="card-title">TicTacToe Game</h4>
-                    <span className="badge bg-secondary badge-pill">
-                      HTML&CSS
-                    </span>
-                    <span className="badge bg-secondary badge-pill">
-                      JavaScript
-                    </span>
-                    <span className="badge bg-secondary badge-pill mb-2">
-                      Game
-                    </span>
-                    <br />
-                    <a href="#" className="read-more-btn link">
-                      Read More
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="post col-md-4 all col-10 mt-3 mt-md-0"
-                data-aos="fade-up"
-              >
-                <div className="card">
-                  <img
-                    src={langTranslator}
-                    className="card-img-top"
-                    alt="Language Translator"
-                  />
-                  <div className="card-body text-center">
-                    <h4 className="card-title">Lang Translator</h4>
-                    <span className="badge bg-secondary badge-pill">
-                      HTML&CSS
-                    </span>
-                    <span className="badge bg-secondary badge-pill">
-                      JavaScript
-                    </span>
-                    <span className="badge bg-secondary badge-pill mb-2">
-                      Web App
-                    </span>
-                    <br />
-                    <a href="#" className="read-more-btn link">
-                      Read More
-                    </a>
+                  <div className="project-content">
+                    <h4 className="project-title">SLTB-TransitEase</h4>
+                    <p className="project-description">
+                      A web application designed to streamline the public
+                      transportation experience in Sri Lanka. It provides
+                      real-time bus tracking, route planning, and digital
+                      ticketing features.
+                    </p>
+                    <div className="project-tech">
+                      <span className="tech-tag">HTML</span>
+                      <span className="tech-tag">CSS</span>
+                      <span className="tech-tag">PHP</span>
+                      <span className="tech-tag">JavaScript</span>
+                      <span className="tech-tag">MySQL</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -846,191 +888,8 @@ export default function Project() {
           </div>
         </div>
       </section>{" "}
-      {/* Testimonials Section */}
-      <section className="testimonial mt-5 pt-5" id="testimonial">
-        <div className="container">
-          <div className="row justify-content-evenly">
-            <div className="col-md-4 col-10" data-aos="slide-right">
-              <img
-                src={testimonialsImg}
-                className="img-fluid"
-                alt="Testimonials"
-              />
-            </div>
-            <div className="col-md-6 col-10 mt-5" data-aos="slide-left">
-              <div className="heading">
-                <small>Testimonials</small>
-                <h3>Happy Clients Feedback</h3>
-
-                <div
-                  id="carouselExampleControls"
-                  className="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  <div className="carousel-inner">
-                    <div className="carousel-item active">
-                      <div className="row justify-content-evenly">
-                        <div className="col-2 text-center">
-                          <i className="bi bi-quote"></i>
-                        </div>
-                        <div className="col-10">
-                          <p className="text-muted">
-                            Quisruam est, qui dolorem ipsum quia dolor sit amet,
-                            consecteaur aeci velit, sed quia non numquam eius
-                            modi tempora incidunt ut lao magnam aliquam quaerat
-                            ...
-                          </p>
-                          <h4>Kevin Andrew</h4>
-                          <small className="fs-6 text-muted">
-                            CEO of Company
-                          </small>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="row justify-content-evenly">
-                        <div className="col-2 text-center">
-                          <i className="bi bi-quote"></i>
-                        </div>
-                        <div className="col-10">
-                          <p className="text-muted">
-                            Excellent work and professional service. Highly
-                            recommended for anyone looking for quality web
-                            development solutions.
-                          </p>
-                          <h4>Sarah Johnson</h4>
-                          <small className="fs-6 text-muted">
-                            Marketing Director
-                          </small>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="carousel-item">
-                      <div className="row justify-content-evenly">
-                        <div className="col-2 text-center">
-                          <i className="bi bi-quote"></i>
-                        </div>
-                        <div className="col-10">
-                          <p className="text-muted">
-                            Outstanding creativity and technical skills.
-                            Delivered exactly what we needed within the
-                            timeline.
-                          </p>
-                          <h4>Michael Brown</h4>
-                          <small className="fs-6 text-muted">
-                            Startup Founder
-                          </small>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    className="nextprev-btn rounded-pill prev-btn"
-                    type="button"
-                    data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev"
-                  >
-                    <i className="bi bi-arrow-left-circle-fill prev"></i>
-                    <span className="visually-hidden">Previous</span>
-                  </button>
-                  <button
-                    className="nextprev-btn rounded-pill next-btn"
-                    type="button"
-                    data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next"
-                  >
-                    <i className="bi bi-arrow-right-circle-fill next"></i>
-                    <span className="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
-            </div>{" "}
-          </div>
-        </div>
-      </section>{" "}
-      {/* Blog Section */}
-      <section className="blog mt-5 pb-5" id="blog">
-        <div className="container">
-          <div className="heading text-center pt-5">
-            <small>Latest News</small>
-            <h3>Blog & Articles</h3>
-          </div>
-          <div
-            className="row justify-content-evenly px-4 mt-4"
-            data-aos="fade-up"
-          >
-            <div className="blogpost col-md-4 col-10 mt-2 mt-md-0 game all">
-              <div className="card">
-                <img
-                  src={game2048}
-                  className="card-img-top rounded-4"
-                  alt="Blog post"
-                />
-                <div className="card-body px-4">
-                  <small>By Pawan Kumavat</small>
-                  <span className="ms-3">Mar 8,2022</span>
-                  <h4 className="card-title">
-                    <a href="">Building Interactive Games with JavaScript</a>
-                  </h4>
-                  <p className="text-muted">
-                    Learn how to create engaging browser games using modern
-                    JavaScript techniques and best practices.
-                  </p>
-                  <a href="#" className="read-more-btn link">
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="blogpost col-md-4 col-10 mt-5 mt-md-0 website all">
-              <div className="card">
-                <img
-                  src={currencyConverter}
-                  className="card-img-top rounded-4"
-                  alt="Blog post"
-                />
-                <div className="card-body px-4">
-                  <small>By Pawan Kumavat</small>
-                  <span className="ms-3">Mar 15,2022</span>
-                  <h4 className="card-title">
-                    <a href="">API Integration in Web Applications</a>
-                  </h4>
-                  <p className="text-muted">
-                    Explore different methods of integrating external APIs into
-                    your web applications for enhanced functionality.
-                  </p>
-                  <a href="#" className="read-more-btn link">
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="blogpost col-md-4 col-10 mt-5 mt-md-0 webapp all">
-              <div className="card">
-                <img
-                  src={dictionary}
-                  className="card-img-top rounded-4"
-                  alt="Blog post"
-                />
-                <div className="card-body px-4">
-                  <small>By Pawan Kumavat</small>
-                  <span className="ms-3">Mar 22,2022</span>
-                  <h4 className="card-title">
-                    <a href="">React Best Practices and Patterns</a>
-                  </h4>
-                  <p className="text-muted">
-                    Discover essential React patterns and best practices for
-                    building scalable and maintainable applications.
-                  </p>
-                  <a href="#" className="read-more-btn link">
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>{" "}
-          </div>
-        </div>
-      </section>{" "}
+      
+      
       {/* Contact Section */}
       <section className="contact py-5" id="contact">
         <div className="container">
@@ -1154,7 +1013,7 @@ export default function Project() {
           </button>
         </div>
         <hr className="text-muted my-4" />
-        <p>Copyright 2025 Piumal Harshana Portfolio | All Rights Reserved.</p>
+        <p> &copy; 2025 Piumal Harshana | All Rights Reserved.</p>
       </footer>
     </div>
   );
