@@ -43,7 +43,7 @@ import firebaseLogo from "../assets/Firebase-Dark.svg";
 import figmaLogo from "../assets/Figma-Dark.svg";
 import photoshopLogo from "../assets/Photoshop.svg";
 import illustratorLogo from "../assets/Illustrator.svg";
-import canva from "../assets/Canva.png";
+import canva from "../assets/canva.png";
 
 // Other Tool logos
 import gitLogo from "../assets/Git.svg";
