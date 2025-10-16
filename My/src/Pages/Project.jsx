@@ -934,7 +934,7 @@ export default function Project() {
                   <i className="bi bi-geo-alt-fill"></i>
                 </div>
                 <div className="col-11">
-                  <p>121 King Street Melbourne, 3000, Australia</p>
+                  <p>Colombo, Sri Lanka</p>
                 </div>
               </div>
               <div className="row justify-content-evenly">
@@ -942,7 +942,7 @@ export default function Project() {
                   <i className="bi bi-telephone-fill"></i>
                 </div>
                 <div className="col-11">
-                  <p>+91 9527818693</p>
+                  <p>+94 786322400</p>
                 </div>
               </div>
               <div className="row justify-content-evenly">
@@ -950,15 +950,7 @@ export default function Project() {
                   <i className="bi bi-send-fill"></i>
                 </div>
                 <div className="col-11">
-                  <p>codewithpawan@gmail.com</p>
-                </div>
-              </div>
-              <div className="row justify-content-evenly">
-                <div className="col-1">
-                  <i className="bi bi-globe-americas"></i>
-                </div>
-                <div className="col-11">
-                  <p>codingpawan.com</p>
+                  <p>piumal.bcc@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -1009,38 +1001,165 @@ export default function Project() {
         id="btn-back-to-top"
       >
         <i className="bi bi-arrow-up"></i>
-      </button>
-      {/* Footer */}
-      <footer className="text-center text-muted py-4">
-        <h3 className="text-white pt-4" data-aos="fade-up">
-          Portfolio
-        </h3>
-        <div className="link-group mt-5" data-aos="fade-up">
-          <a href="#home">Home</a>
-          <div className="vr"></div>
-          <a href="#about">About</a>
-          <div className="vr"></div>
-          <a href="#service">Service</a>
-          <div className="vr"></div>
-          <a href="#portfolio">Portfolio</a>
-          <div className="vr"></div>
-          <a href="#blog">Blog</a>
-          <div className="vr"></div>
-          <a href="#contact">Contact</a>
+      </button>{" "}
+      {/* Professional Footer */}
+      <footer className="professional-footer">
+        <div className="container">
+          <div className="row g-4">
+            {/* About Section */}
+            <div className="col-lg-4 col-md-6" data-aos="fade-up">
+              <div className="footer-about">
+                <h4 className="footer-title">Piumal Harshana</h4>
+                <p className="footer-description">
+                  Full-Stack Developer passionate about creating innovative web
+                  solutions. Specializing in React, Node.js, and modern web
+                  technologies to build exceptional digital experiences.
+                </p>
+                <div className="footer-contact">
+                  <div className="contact-item">
+                    <i className="bi bi-envelope"></i>
+                    <span>piumal.bcc@gmail.com</span>
+                  </div>
+                  <div className="contact-item">
+                    <i className="bi bi-phone"></i>
+                    <span>+94 786322400</span>
+                  </div>
+                  <div className="contact-item">
+                    <i className="bi bi-geo-alt"></i>
+                    <span>Colombo, Sri Lanka</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div
+              className="col-lg-2 col-md-3 col-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div className="footer-links">
+                <h5 className="footer-section-title">Quick Links</h5>
+                <ul className="footer-link-list">
+                  <li>
+                    <a href="#home">Home</a>
+                  </li>
+                  <li>
+                    <a href="#service">About</a>
+                  </li>
+                  <li>
+                    <a href="#about">Skills</a>
+                  </li>
+                  <li>
+                    <a href="#portfolio">Projects</a>
+                  </li>
+                  <li>
+                    <a href="#contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Services */}
+            <div
+              className="col-lg-3 col-md-3 col-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div className="footer-links">
+                <h5 className="footer-section-title">Services</h5>
+                <ul className="footer-link-list">
+                  <li>
+                    <a href="#portfolio">Web Development</a>
+                  </li>
+                  <li>
+                    <a href="#portfolio">Frontend Development</a>
+                  </li>
+                  <li>
+                    <a href="#portfolio">Backend Development</a>
+                  </li>
+                  <li>
+                    <a href="#portfolio">Full-Stack Solutions</a>
+                  </li>
+                  <li>
+                    <a href="#portfolio">UI/UX Design</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Social Media & Newsletter */}
+            <div
+              className="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div className="footer-social">
+                <h5 className="footer-section-title">Connect With Me</h5>
+                <p className="social-description">
+                  Follow me on social media for updates and latest projects.
+                </p>
+                <div className="footer-social-links">
+                  <a
+                    href="https://github.com/piumalhk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer-social-btn github"
+                    title="GitHub"
+                  >
+                    <i className="bi bi-github"></i>
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/piumal-harshana-71b968302"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer-social-btn linkedin"
+                    title="LinkedIn"
+                  >
+                    <i className="bi bi-linkedin"></i>
+                  </a>
+                  <a
+                    href="mailto:piumal.bcc@gmail.com"
+                    className="footer-social-btn email"
+                    title="Email"
+                  >
+                    <i className="bi bi-envelope"></i>
+                  </a>
+                  <a
+                    href="tel:+94786322400"
+                    className="footer-social-btn phone"
+                    title="Phone"
+                  >
+                    <i className="bi bi-phone"></i>
+                  </a>
+                </div>
+
+                {/* Newsletter */}
+               
+              </div>
+            </div>
+          </div>
+
+          {/* Footer Bottom */}
+          <div className="footer-bottom">
+            <div className="row align-items-center">
+              <div className="col-md-6">
+                <p className="footer-copyright">
+                  &copy; 2025{" "}
+                  <span className="brand-name">Piumal Harshana</span>. All
+                  Rights Reserved.
+                </p>
+              </div>
+              <div className="col-md-6">
+                <div className="footer-bottom-links">
+                  <a href="#privacy">Privacy Policy</a>
+                  <a href="#terms">Terms of Service</a>
+                  <a href="#sitemap">Sitemap</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="social-links mt-5" data-aos="fade-up">
-          <button className="rounded-pill dribble">
-            <i className="bi bi-dribbble"></i>
-          </button>
-          <button className="rounded-pill whatsapp">
-            <i className="bi bi-whatsapp"></i>
-          </button>
-          <button className="rounded-pill behance">
-            <i className="bi bi-behance"></i>
-          </button>
-        </div>
-        <hr className="text-muted my-4" />
-        <p> &copy; 2025 Piumal Harshana | All Rights Reserved.</p>
       </footer>
     </div>
   );
