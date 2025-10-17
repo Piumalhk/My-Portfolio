@@ -15,6 +15,7 @@ A modern, responsive portfolio website built with React and Vite, showcasing my 
 ## 🚀 Technologies Used
 
 ### Frontend
+
 - React 19.1.1
 - Vite 7.1.9
 - Bootstrap 5
@@ -22,6 +23,7 @@ A modern, responsive portfolio website built with React and Vite, showcasing my 
 - EmailJS
 
 ### Development Tools
+
 - ESLint for code quality
 - Tailwind CSS utilities
 - Framer Motion for animations
@@ -46,10 +48,49 @@ A modern, responsive portfolio website built with React and Vite, showcasing my 
 
 Deployed on Vercel: [Your Portfolio URL]
 
-## 📧 Contact
+## 🚀 Deployment on Vercel (Without vercel.json)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project is configured for automatic Vercel deployment:
 
-## Expanding the ESLint configuration
+### Steps to Deploy:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Push to GitHub**
+
+   ```bash
+   git add .
+   git commit -m "Ready for deployment"
+   git push origin main
+   ```
+
+2. **Deploy on Vercel**
+   - Visit [vercel.com](https://vercel.com)
+   - Click "New Project"
+   - Import your GitHub repository
+   - Vercel will automatically detect:
+     - ✅ Framework: Vite
+     - ✅ Build Command: `npm run build`
+     - ✅ Output Directory: `dist`
+     - ✅ Install Command: `npm install`
+   - Click "Deploy"
+
+### Why No vercel.json?
+
+Vercel automatically detects Vite projects and applies the correct configuration. No manual configuration needed!
+
+## 📧 Contact Information
+
+**Piumal Harshana**
+
+- Email: piumal.bcc@gmail.com
+- Phone: +94 786322400
+- LinkedIn: [piumal-harshana-71b968302](https://linkedin.com/in/piumal-harshana-71b968302)
+- GitHub: [piumalhk](https://github.com/piumalhk)
+- Location: Colombo, Sri Lanka
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+---
+
+⭐ **Star this repository if you found it helpful!**

@@ -5,9 +5,6 @@ import emailjs from "@emailjs/browser";
 
 // Import images
 import banner01 from "../assets/banner-01.jpg";
-import serviceIcon1 from "../assets/service-icon1.png";
-import serviceIcon2 from "../assets/service-icon2.png";
-import serviceIcon3 from "../assets/service-icon3.png";
 
 // Project images
 import vocalGuardImg from "../assets/VocalGuard.png";
@@ -16,7 +13,6 @@ import studentPortalImg from "../assets/student portal.png";
 import truthiFyImg from "../assets/TrutiFy.png";
 import healLinkImg from "../assets/HealLink.png";
 import sltbTransitImg from "../assets/SLTB-TransitEase.png";
-import testimonialsImg from "../assets/tastimonials-img.png";
 
 // Import SVG logos for technologies
 import htmlLogo from "../assets/HTML.svg";
@@ -53,11 +49,6 @@ import dockerLogo from "../assets/Docker.svg";
 import postmanLogo from "../assets/Postman.svg";
 
 export default function Project() {
-  const [htmlProgress, setHtmlProgress] = useState(0);
-  const [jsProgress, setJsProgress] = useState(0);
-  const [phpProgress, setPhpProgress] = useState(0);
-  const [reactProgress, setReactProgress] = useState(0);
-
   // Contact form states
   const form = useRef();
   const [isLoading, setIsLoading] = useState(false);
@@ -124,51 +115,10 @@ export default function Project() {
         };
         document.body.appendChild(aosScript);
       }
-    };
-
-    // Initialize scripts after a short delay to ensure DOM is ready
+    }; // Initialize scripts after a short delay to ensure DOM is ready
     setTimeout(initializeExternalScripts, 100);
 
-    // Progress bar animations
-    const htmlTimer = setInterval(() => {
-      setHtmlProgress((prev) => {
-        if (prev >= 90) {
-          clearInterval(htmlTimer);
-          return 90;
-        }
-        return prev + 1;
-      });
-    }, 30);
-
-    const jsTimer = setInterval(() => {
-      setJsProgress((prev) => {
-        if (prev >= 75) {
-          clearInterval(jsTimer);
-          return 75;
-        }
-        return prev + 1;
-      });
-    }, 30);
-
-    const phpTimer = setInterval(() => {
-      setPhpProgress((prev) => {
-        if (prev >= 80) {
-          clearInterval(phpTimer);
-          return 80;
-        }
-        return prev + 1;
-      });
-    }, 30);
-
-    const reactTimer = setInterval(() => {
-      setReactProgress((prev) => {
-        if (prev >= 85) {
-          clearInterval(reactTimer);
-          return 85;
-        }
-        return prev + 1;
-      });
-    }, 30); // Enhanced Back to top button functionality
+    // Enhanced Back to top button functionality
     const handleBackToTop = () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
@@ -194,15 +144,9 @@ export default function Project() {
     }
 
     // Add scroll event listener
-    window.addEventListener("scroll", handleScroll);
-
-    // Initial check
+    window.addEventListener("scroll", handleScroll); // Initial check
     handleScroll(); // Cleanup function
     return () => {
-      clearInterval(htmlTimer);
-      clearInterval(jsTimer);
-      clearInterval(phpTimer);
-      clearInterval(reactTimer);
       if (backToTopBtn) {
         backToTopBtn.removeEventListener("click", handleBackToTop);
       }
@@ -256,8 +200,8 @@ export default function Project() {
                   Skills
                 </a>
               </li>
-              <li className="nav-item " >
-                <a className="nav-link" href="#portfolio" >
+              <li className="nav-item ">
+                <a className="nav-link" href="#portfolio">
                   Projects
                 </a>
               </li>
