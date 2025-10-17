@@ -138,7 +138,9 @@ body {
   width: 100%;
   left: 0;
 }
-
+.n{
+  margin-right: 140px;
+}
 .one {
   font-weight: bolder;
   color: #ffffff;
@@ -1193,11 +1195,7 @@ section::before {
 }
 
 /* Form Field Focus Enhancement */
-.contact-form .form-control:focus {
-  border-color: var(--accent-purple);
-  box-shadow: 0 0 0 0.2rem rgba(108, 92, 231, 0.25);
-  background-color: white;
-}
+
 
 /* Success Message Animation */
 .alert {
@@ -1809,9 +1807,10 @@ img {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  margin-left: 40px;
+  margin-left: 50px;
   padding: 8px;
   border-radius: 50%;
+  margin-top: 20px;
 }
 
 /* Animated Border Effect */
