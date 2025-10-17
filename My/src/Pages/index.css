@@ -39,7 +39,7 @@ body {
   box-sizing: border-box;
   background: var(--gradient-dark);
   color: var(--text-primary);
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 *,
@@ -101,7 +101,9 @@ body {
   border-bottom: 1px solid rgba(108, 92, 231, 0.2);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
-
+.container {
+  margin-left: 100px;
+}
 .navbar-brand {
   background: var(--gradient-purple);
   -webkit-background-clip: text;
@@ -112,10 +114,14 @@ body {
 }
 
 .nav-link {
-  color: var(--text-secondary) !important;
+  color: white !important;
   font-weight: 500;
   transition: all 0.3s ease;
   position: relative;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
 }
 
 .nav-link:hover {
@@ -138,7 +144,7 @@ body {
   width: 100%;
   left: 0;
 }
-.n{
+.n {
   margin-right: 140px;
 }
 .one {
@@ -1196,7 +1202,6 @@ section::before {
 
 /* Form Field Focus Enhancement */
 
-
 /* Success Message Animation */
 .alert {
   animation: slideInDown 0.5s ease-out;
@@ -1804,23 +1809,24 @@ img {
 /* Animated Circular Profile Frame */
 .profile-frame {
   position: relative;
-  width: 100%;
+  width: 400px;
+  height: 400px;
   max-width: 400px;
   margin: 0 auto;
-  margin-left: 50px;
-  padding: 8px;
+  margin-left: 140px;
+
   border-radius: 50%;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 /* Animated Border Effect */
 .profile-frame::before {
   content: "";
   position: absolute;
-  top: -6px;
-  left: -6px;
-  right: -6px;
-  bottom: -6px;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
   background: #1a365d;
   border-radius: 50%;
   z-index: -2;
@@ -1832,10 +1838,10 @@ img {
 .profile-frame::after {
   content: "";
   position: absolute;
-  top: -4px;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
   background: radial-gradient(circle, #2d5aa0 0%, transparent 70%);
   border-radius: 50%;
   z-index: -1;
@@ -1846,7 +1852,8 @@ img {
 /* Inner container for the image */
 .profile-inner {
   position: relative;
-  width: 100%;
+  width: 400px;
+  height: 400px;
   aspect-ratio: 1;
   border-radius: 50%;
   overflow: hidden;
@@ -1857,8 +1864,8 @@ img {
 
 /* Profile image with smooth scaling */
 .profile-image {
-  width: 100%;
-  height: 100%;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
   border-radius: 50%;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1937,23 +1944,23 @@ img {
 /* Advanced Responsive Design */
 @media (max-width: 1200px) {
   .profile-frame {
-    max-width: 350px;
+    max-width: 450px;
     margin-left: 20px;
   }
 }
 
 @media (max-width: 768px) {
   .profile-frame {
-    max-width: 280px;
+    max-width: 350px;
     margin-left: 0;
     padding: 6px;
   }
 
   .profile-frame::before {
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
   }
 
   .profile-frame::after {
@@ -1970,7 +1977,7 @@ img {
 
 @media (max-width: 480px) {
   .profile-frame {
-    max-width: 220px;
+    max-width: 280px;
     padding: 4px;
   }
 
@@ -2047,4 +2054,9 @@ img {
 
 .project-description {
   text-align: justify;
+}
+
+.text2 {
+  text-align: justify;
+  font-weight: 200;
 }

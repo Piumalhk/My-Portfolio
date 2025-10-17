@@ -256,8 +256,8 @@ export default function Project() {
                   Skills
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#portfolio">
+              <li className="nav-item " >
+                <a className="nav-link" href="#portfolio" >
                   Projects
                 </a>
               </li>
@@ -281,7 +281,7 @@ export default function Project() {
         </div>
       </nav>
       {/* Home Section */}
-      <section className="home pt-5 pb-5" id="home">
+      <section className="home pt-3  pb-5" id="home">
         <div className="container">
           <div className="row justify-content-evenly align-middle">
             <div
@@ -289,14 +289,14 @@ export default function Project() {
               data-aos="slide-right"
             >
               {" "}
-              <h2 className="mt-2 glow-text">
+              <h2 className="mt-4  ">
                 <span className="h">Hello! I Am</span> <br />
                 <span className="c-orange">Piumal Harshana</span>
               </h2>
               <span className="one">And I'm A</span>{" "}
               <span className="two"> Full-Stack Developer</span>
               <br /> <br />{" "}
-              <p className="text1">
+              <p className="text2">
                 I’m a passionate developer who loves turning ideas into
                 interactive, user-friendly digital experiences. I focus on
                 building creative and functional solutions that combine design,
@@ -381,7 +381,7 @@ export default function Project() {
           </div>{" "}
           {/* Web Technologies */}
           <div className="skill-category mb-5" data-aos="fade-up">
-            <h4 className="category-title glow-text mb-4">
+            <h4 className="category-title  mb-4">
               <i className="bi bi-code-slash me-2"></i>Web Technologies
             </h4>
             <div className="row justify-content-center">
@@ -445,7 +445,7 @@ export default function Project() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <h4 className="category-title glow-text mb-4">
+            <h4 className="category-title  mb-4">
               <i className="bi bi-layers me-2"></i>Frameworks & Libraries
             </h4>
             <div className="row justify-content-center">
@@ -530,7 +530,7 @@ export default function Project() {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <h4 className="category-title glow-text mb-4">
+            <h4 className="category-title  mb-4">
               <i className="bi bi-database me-2"></i>Databases
             </h4>
             <div className="row justify-content-center">
@@ -575,7 +575,7 @@ export default function Project() {
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            <h4 className="category-title glow-text mb-4">
+            <h4 className="category-title  mb-4">
               <i className="bi bi-palette me-2"></i>Design Tools
             </h4>
             <div className="row justify-content-center">
@@ -628,7 +628,7 @@ export default function Project() {
             data-aos="fade-up"
             data-aos-delay="400"
           >
-            <h4 className="category-title glow-text mb-4">
+            <h4 className="category-title  mb-4">
               <i className="bi bi-tools me-2"></i>Other Tools
             </h4>
             <div className="row justify-content-center">
