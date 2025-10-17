@@ -1,9 +1,10 @@
 
 
 {
-  "name": "vite-project",
+  "name": "piumal-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Personal Portfolio Website - Piumal Harshana",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -1,13 +1,52 @@
-# React + Vite
+# Piumal Harshana - Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React and Vite, showcasing my projects, skills, and professional experience as a Full-Stack Developer.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Modern Design**: Dark theme with animated elements and smooth transitions
+- **Responsive Layout**: Optimized for all device sizes
+- **Interactive Animations**: AOS (Animate On Scroll) effects and custom animations
+- **Contact Form**: EmailJS integration for direct contact
+- **Project Showcase**: Dynamic project cards with technology tags
+- **Skills Section**: Categorized tech stack with SVG icons
+- **Performance Optimized**: Fast loading with Vite build system
 
-## React Compiler
+## 🚀 Technologies Used
+
+### Frontend
+- React 19.1.1
+- Vite 7.1.9
+- Bootstrap 5
+- AOS (Animate On Scroll)
+- EmailJS
+
+### Development Tools
+- ESLint for code quality
+- Tailwind CSS utilities
+- Framer Motion for animations
+
+## 📦 Installation & Setup
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start development server:
+   ```bash
+   npm run dev
+   ```
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## 🌐 Live Demo
+
+Deployed on Vercel: [Your Portfolio URL]
+
+## 📧 Contact
 
 The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
