@@ -101,9 +101,7 @@ body {
   border-bottom: 1px solid rgba(108, 92, 231, 0.2);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
-.container {
-  margin-left: 100px;
-}
+
 .navbar-brand {
   background: var(--gradient-purple);
   -webkit-background-clip: text;
@@ -119,7 +117,9 @@ body {
   transition: all 0.3s ease;
   position: relative;
 }
-
+.new{
+  margin-right: 180px;
+}
 .navbar-nav .nav-link {
   color: white !important;
 }
@@ -1623,7 +1623,7 @@ section::before {
   border: 1px solid #6c5ce7;
   padding: 40px;
   border-radius: 50%;
-  margin-left: 80px;
+  margin-left: 10px;
 }
 
 .image {
@@ -1813,10 +1813,9 @@ img {
   height: 400px;
   max-width: 400px;
   margin: 0 auto;
-  margin-left: 140px;
-
+margin-left: 20px;
   border-radius: 50%;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 /* Animated Border Effect */

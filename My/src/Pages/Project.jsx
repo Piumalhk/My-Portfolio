@@ -229,7 +229,7 @@ export default function Project() {
         <div className="container">
           <div className="row justify-content-evenly align-middle">
             <div
-              className="col-10 col-md-6 text-center text-md-start"
+              className="new col-10 col-md-6 text-center text-md-start"
               data-aos="slide-right"
             >
               {" "}
