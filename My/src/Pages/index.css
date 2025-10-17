@@ -117,8 +117,78 @@ body {
   transition: all 0.3s ease;
   position: relative;
 }
-.new{
-  margin-right: 180px;
+/* Home Section Layout */
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.home .container {
+  z-index: 2;
+  position: relative;
+}
+
+.home .row {
+  align-items: center;
+  min-height: 80vh;
+}
+
+/* Text Content Column */
+.home .new {
+  margin-right: 0;
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Banner Image Column */
+.home .col-md-4 {
+  order: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Social Buttons Positioning */
+.social-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+  padding-top: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+
+  .home .row {
+    min-height: auto;
+  }
+
+  .home .new {
+    order: 1;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .home .col-md-4 {
+    order: 2;
+    margin-top: 1rem;
+  }
+
+  .social-buttons {
+    justify-content: center;
+    margin-top: 20px;
+  }
 }
 .navbar-nav .nav-link {
   color: white !important;
@@ -160,11 +230,62 @@ body {
   margin-left: 10px;
 }
 
-/*nav mobile responsive*/
+/* Navbar Mobile Responsive */
+.navbar-toggler {
+  border: none;
+  padding: 4px 8px;
+  background: rgba(108, 92, 231, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
 
-@media(max-width:576px){
-  .navbar-nav{
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(108, 92, 231, 0.25);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.navbar-toggler:hover {
+  background: rgba(108, 92, 231, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Manual navbar collapse functionality */
+.navbar-collapse {
+  transition: all 0.3s ease;
+}
+
+.navbar-collapse:not(.show) {
+  display: none;
+}
+
+.navbar-collapse.show {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .navbar-collapse {
+    display: flex !important;
+  }
+
+  .navbar-collapse.show {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-nav {
     margin-right: 0px;
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0.25rem 0;
   }
 }
 /* Button Styles */
@@ -251,11 +372,12 @@ body {
   border: 2px solid #6c5ce7;
 }
 
-/* Social Media Buttons in Home Section */
+/* Social Media Buttons */
 .social-buttons {
   display: flex;
   align-items: center;
   gap: 15px;
+  margin-top: 30px;
 }
 
 .social-btn {
@@ -271,6 +393,7 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
+  border: 2px solid transparent;
 }
 
 .social-btn::before {
@@ -294,7 +417,7 @@ body {
 .github-btn {
   background: linear-gradient(135deg, #333 0%, #24292e 100%);
   color: #ffffff;
-  border: 2px solid #333;
+  border-color: #333;
 }
 
 .github-btn::before {
@@ -315,7 +438,7 @@ body {
 .linkedin-btn {
   background: linear-gradient(135deg, #0077b5 0%, #005885 100%);
   color: #ffffff;
-  border: 2px solid #0077b5;
+  border-color: #0077b5;
 }
 
 .linkedin-btn::before {
@@ -338,6 +461,25 @@ body {
   filter: brightness(1.2);
 }
 
+/* Mobile responsiveness for social buttons */
+@media (max-width: 576px) {
+  .social-buttons {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .social-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+.social-btn:hover i {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
 .h-btn a {
   text-decoration: none;
   color: inherit;
@@ -348,56 +490,7 @@ body {
   color: inherit;
 }
 
-/* Social Buttons in Home Section */
-.social-buttons {
-  display: flex;
-  padding-top: 60px;
-}
-
-.social-btn {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-  position: relative;
-  overflow: hidden;
-}
-
-.social-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: -1;
-}
-
-.github-btn {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-.github-btn::before {
-  background: linear-gradient(135deg, #333333, #24292e);
-}
-
-.github-btn:hover {
-  color: #ffffff;
-  border-color: #24292e;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(36, 41, 46, 0.3);
-}
+/* Additional hover effects for all buttons */
 
 .github-btn:hover::before {
   opacity: 1;
@@ -478,57 +571,53 @@ section::before {
   }
 }
 /*home mobile responsive*/
-@media(max-width:576px){
+@media (max-width: 576px) {
   .home h2 {
-    font-size: 3.5rem;
+    font-size: 2rem;
     line-height: 3rem;
     margin-left: 40px;
   }
   .c-orange {
-    font-size: 3.5rem;
-    
+    font-size: 3rem;
   }
   .home p {
     font-size: 1.1rem;
     margin-left: 40px;
   }
-  .one{
-    font-size: 20px;
+  .one {
+    font-size: 14px;
     margin-left: 40px;
   }
-  .two{
-    font-size: 20px;
-    
+  .two {
+    font-size: 14px;
   }
-  .h-btn{
-    margin-left: 40px;
-     width: 100px;
+  .h-btn {
+   
+    width: 100px;
     height: 40px;
-     font-size: medium;
+    font-size: medium;
   }
-  .c-btn{
+
+ 
+  .c-btn {
     width: 100px;
     height: 40px;
     font-size: small;
+   
+    align-items: center;
+  }
+  .p{
+     display: flex;
+  flex-direction: column;
+  align-items: center; 
   }
 
-  .github-btn{
-      width: 40px;
-      height: 40px;
-      font-size: 1rem;
-    margin-left: 160px;
-  }
- .linkedin-btn{
- width: 40px;
+  .github-btn {
+    width: 40px;
     height: 40px;
     font-size: 1rem;
- }
-
- .profile-frame{
-  width: 250px;
-  height: 250px;
-  margin-left: 20px;
- }
+    margin-left: 10px;
+  } /* Original mobile responsive profile frame styles - removed duplicates */
 }
 /* Expertise Section */
 .expertise {
@@ -591,13 +680,13 @@ section::before {
 }
 /*content mobile responsive*/
 @media (max-width: 576px) {
-.service-card{
-  width: 400px;
-}
+  .service-card {
+    width: 350px;
+  }
 
   .content {
-    width: 400px;
-   padding-right: 40px;
+    width: 350px;
+    padding-right: 40px;
   }
 }
 
@@ -821,12 +910,11 @@ section::before {
 @media (max-width: 376px) {
   .skill-item {
     height: 80px;
-    padding: 0.5rem 0.3rem;
-    margin-left: -20px;
+    margin-right: 20px;
   }
 
   .skill-icon {
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
 
   .skill-item span {
@@ -1808,12 +1896,11 @@ section::before {
     font-size: 1.1rem;
   }
 
-    #btn-back-to-top i {
-  transition: all 0.3s ease;
-  font-size: 1rem;
-}
+  #btn-back-to-top i {
+    transition: all 0.3s ease;
+    font-size: 1rem;
   }
-
+}
 
 /* Heading Styles */
 .heading small {
@@ -1890,10 +1977,8 @@ img {
   width: 400px;
   height: 400px;
   max-width: 400px;
-  margin: 0 auto;
-margin-left: 20px;
+  margin: 40px auto 0 auto;
   border-radius: 50%;
-  margin-top: 40px;
 }
 
 /* Animated Border Effect */
@@ -2021,41 +2106,76 @@ margin-left: 20px;
 /* Advanced Responsive Design */
 @media (max-width: 1200px) {
   .profile-frame {
-    max-width: 450px;
-    margin-left: 20px;
+    width: 350px;
+    height: 350px;
+    max-width: 350px;
+    margin-left: 0;
+    margin: 0 auto;
+  }
+
+  .profile-inner {
+    width: 350px;
+    height: 350px;
+  }
+
+  .profile-image {
+    width: 350px;
+    height: 350px;
   }
 }
 
 @media (max-width: 768px) {
   .profile-frame {
-    max-width: 350px;
-    margin-left: 0;
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    margin: 0 auto;
     padding: 6px;
   }
 
-  .profile-frame::before {
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
+  .profile-inner {
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgba(15, 15, 35, 0.9);
   }
 
-  .profile-frame::after {
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-frame::before {
     top: -3px;
     left: -3px;
     right: -3px;
     bottom: -3px;
   }
 
-  .profile-inner {
-    border: 2px solid rgba(15, 15, 35, 0.9);
+  .profile-frame::after {
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
   }
 }
 
 @media (max-width: 480px) {
   .profile-frame {
-    max-width: 280px;
+    width: 50px;
+    height: 50px;
+    max-width: 50px;
     padding: 4px;
+    margin: 0 auto;
+  }
+
+  .profile-inner {
+    width: 50px;
+    height: 50px;
+  }
+
+  .profile-image {
+    width: 50px;
+    height: 50px;
   }
 
   /* Reduce animation intensity on smaller screens */

@@ -91,10 +91,20 @@ export default function Project() {
     const contactForm = document.getElementById("contact-form");
     if (contactForm) {
       contactForm.addEventListener("submit", sendEmail);
-    }
-
-    // Initialize external scripts (CSS is now preloaded in HTML)
+    } // Initialize external scripts (CSS is now preloaded in HTML)
     const initializeExternalScripts = () => {
+      // Load Bootstrap JavaScript if not already loaded
+      if (!window.bootstrap) {
+        const bootstrapScript = document.createElement("script");
+        bootstrapScript.src =
+          "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js";
+        bootstrapScript.crossOrigin = "anonymous";
+        bootstrapScript.onload = () => {
+          console.log("Bootstrap JavaScript loaded successfully");
+        };
+        document.head.appendChild(bootstrapScript);
+      }
+
       // Initialize AOS if available
       if (window.AOS) {
         window.AOS.init({
@@ -117,6 +127,33 @@ export default function Project() {
       }
     }; // Initialize scripts after a short delay to ensure DOM is ready
     setTimeout(initializeExternalScripts, 100);
+
+    // Add manual navbar toggle functionality as fallback
+    const setupNavbarToggle = () => {
+      const navbarToggler = document.querySelector(".navbar-toggler");
+      const navbarCollapse = document.querySelector(".navbar-collapse");
+
+      if (navbarToggler && navbarCollapse) {
+        navbarToggler.addEventListener("click", () => {
+          // If Bootstrap is loaded, let it handle the toggle
+          if (window.bootstrap) {
+            return;
+          }
+
+          // Fallback manual toggle
+          if (navbarCollapse.classList.contains("show")) {
+            navbarCollapse.classList.remove("show");
+            navbarToggler.setAttribute("aria-expanded", "false");
+          } else {
+            navbarCollapse.classList.add("show");
+            navbarToggler.setAttribute("aria-expanded", "true");
+          }
+        });
+      }
+    };
+
+    // Setup navbar toggle functionality
+    setTimeout(setupNavbarToggle, 200);
 
     // Enhanced Back to top button functionality
     const handleBackToTop = () => {
@@ -162,29 +199,32 @@ export default function Project() {
 
   return (
     <div>
+      {" "}
       {/* Navigation */}
       <nav
         id="navbar-top"
-        className="navbar navbar-expand-lg navbar-light  sticky-top"
+        className="navbar navbar-expand-lg navbar-dark sticky-top"
       >
-        <div className="container-fluid px-5">
-          {" "}
+        <div className="container-fluid px-lg-5 px-3">
           <a className="navbar-brand fw-bold fs-2" href="#">
             Portfolio
           </a>
+
+          {/* Mobile menu toggle button */}
           <button
-            className="nav-menu d-md-none"
+            className="navbar-toggler border-0"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            <i className="bi bi-menu-button-fill"></i>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div
-            className="collapse navbar-collapse justify-content-center"
-            id="navbarNav"
-          >
-            <ul className="navbar-nav gap-4" style={{ fontSize: "1.1rem" }}>
+
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav mx-auto gap-lg-4">
               <li className="nav-item">
                 <a className="nav-link" aria-current="page" href="#">
                   Home
@@ -200,28 +240,32 @@ export default function Project() {
                   Skills
                 </a>
               </li>
-              <li className="nav-item ">
+              <li className="nav-item">
                 <a className="nav-link" href="#portfolio">
                   Projects
                 </a>
               </li>
-
               <li className="nav-item">
                 <a className="nav-link" href="#contact">
                   Contact
                 </a>
               </li>
             </ul>
+
+            {/* Download CV button */}
+            <div className="p d-lg-block">
+              
+              <button className="c-btn">
+                <a
+                  href="21CIS0008_Piumal.pdf"
+                  download="Piumal_CV"
+                  style={{ textDecoration: "none", color: "#fff" }}
+                >
+                  Download CV
+                </a>
+              </button>
+            </div>
           </div>
-          <button className="c-btn  ">
-            <a
-              href="21CIS0008_Piumal.pdf"
-              download="Piumal_CV"
-              style={{ textDecoration: "none", color: "#fff" }}
-            >
-              Download CV
-            </a>
-          </button>
         </div>
       </nav>
       {/* Home Section */}
@@ -246,9 +290,11 @@ export default function Project() {
                 building creative and functional solutions that combine design,
                 usability, and performance.
               </p>{" "}
-              <button className="h-btn  ">
-                <a href="#contact">Hire Me</a>
-              </button>{" "}
+              <div className="hire">
+                <button className="h-btn  ">
+                  <a href="#contact">Hire Me</a>
+                </button>{" "}
+              </div>
               {/* Social Buttons */}
               <div className="social-buttons mt-3">
                 <a

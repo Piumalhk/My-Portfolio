@@ -216,7 +216,6 @@
 
     <!-- Preload critical JavaScript -->
     <script type="module" src="/src/main.jsx"></script>
-
     <!-- Preload external scripts -->
     <script>
       // Preload critical external scripts
@@ -233,6 +232,14 @@
         link.as = "script";
         document.head.appendChild(link);
       });
+
+      // Actually load Bootstrap JavaScript
+      const bootstrapScript = document.createElement("script");
+      bootstrapScript.src =
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js";
+      bootstrapScript.crossOrigin = "anonymous";
+      bootstrapScript.async = true;
+      document.head.appendChild(bootstrapScript);
     </script>
   </body>
 </html>
