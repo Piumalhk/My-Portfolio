@@ -159,6 +159,14 @@ body {
   font-size: 25px;
   margin-left: 10px;
 }
+
+/*nav mobile responsive*/
+
+@media(max-width:576px){
+  .navbar-nav{
+    margin-right: 0px;
+  }
+}
 /* Button Styles */
 
 .text1 {
@@ -469,7 +477,59 @@ section::before {
     text-shadow: 0 0 30px rgba(253, 121, 168, 0.8);
   }
 }
+/*home mobile responsive*/
+@media(max-width:576px){
+  .home h2 {
+    font-size: 3.5rem;
+    line-height: 3rem;
+    margin-left: 40px;
+  }
+  .c-orange {
+    font-size: 3.5rem;
+    
+  }
+  .home p {
+    font-size: 1.1rem;
+    margin-left: 40px;
+  }
+  .one{
+    font-size: 20px;
+    margin-left: 40px;
+  }
+  .two{
+    font-size: 20px;
+    
+  }
+  .h-btn{
+    margin-left: 40px;
+     width: 100px;
+    height: 40px;
+     font-size: medium;
+  }
+  .c-btn{
+    width: 100px;
+    height: 40px;
+    font-size: small;
+  }
 
+  .github-btn{
+      width: 40px;
+      height: 40px;
+      font-size: 1rem;
+    margin-left: 160px;
+  }
+ .linkedin-btn{
+ width: 40px;
+    height: 40px;
+    font-size: 1rem;
+ }
+
+ .profile-frame{
+  width: 250px;
+  height: 250px;
+  margin-left: 20px;
+ }
+}
 /* Expertise Section */
 .expertise {
   background: linear-gradient(
@@ -528,6 +588,17 @@ section::before {
 .link:hover {
   color: var(--accent-gold);
   text-shadow: 0 0 10px rgba(253, 203, 110, 0.5);
+}
+/*content mobile responsive*/
+@media (max-width: 576px) {
+.service-card{
+  width: 400px;
+}
+
+  .content {
+    width: 400px;
+   padding-right: 40px;
+  }
 }
 
 /* Skills Section */
@@ -747,10 +818,11 @@ section::before {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 376px) {
   .skill-item {
     height: 80px;
-    padding: 0.8rem 0.3rem;
+    padding: 0.5rem 0.3rem;
+    margin-left: -20px;
   }
 
   .skill-icon {
@@ -1679,7 +1751,7 @@ section::before {
   right: 0;
   bottom: 0;
   border-radius: 50%;
-  background: var(--gradient-secondary);
+  background: rgba(48, 34, 115, 0.737);
   opacity: 0;
   transition: all 0.3s ease;
   z-index: -1;
@@ -1727,15 +1799,21 @@ section::before {
 }
 
 /* Mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 368px) {
   #btn-back-to-top {
     bottom: 20px;
     right: 20px;
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     font-size: 1.1rem;
   }
+
+    #btn-back-to-top i {
+  transition: all 0.3s ease;
+  font-size: 1rem;
 }
+  }
+
 
 /* Heading Styles */
 .heading small {
