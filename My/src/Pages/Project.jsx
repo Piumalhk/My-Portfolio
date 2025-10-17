@@ -281,7 +281,7 @@ export default function Project() {
                 <span className="h">Hello! I Am</span> <br />
                 <span className="c-orange">Piumal Harshana</span>
               </h2>
-              <span className="one">And I'm A</span>{" "}
+              <span className="one">And I'm a</span>{" "}
               <span className="two"> Full-Stack Developer</span>
               <br /> <br />{" "}
               <p className="text2">
@@ -296,7 +296,7 @@ export default function Project() {
                 </button>{" "}
               </div>
               {/* Social Buttons */}
-              <div className="social-buttons mt-3">
+              <div className="social-buttons pt-8">
                 <a
                   href="https://github.com/piumalhk"
                   target="_blank"
