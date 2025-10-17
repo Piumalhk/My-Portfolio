@@ -96,87 +96,38 @@ export default function Project() {
             setIsLoading(false);
           }
         );
-    };
-
-    // Add event listener to contact form
+    }; // Add event listener to contact form
     const contactForm = document.getElementById("contact-form");
     if (contactForm) {
       contactForm.addEventListener("submit", sendEmail);
     }
 
-    // Add external stylesheets and scripts
-    const addExternalResources = () => {
-      // Bootstrap CSS
-      const bootstrapLink = document.createElement("link");
-      bootstrapLink.href =
-        "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css";
-      bootstrapLink.rel = "stylesheet";
-      bootstrapLink.integrity =
-        "sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65";
-      bootstrapLink.crossOrigin = "anonymous";
-      document.head.appendChild(bootstrapLink);
-
-      // Google Fonts
-      const fontLink1 = document.createElement("link");
-      fontLink1.rel = "preconnect";
-      fontLink1.href = "https://fonts.googleapis.com";
-      document.head.appendChild(fontLink1);
-
-      const fontLink2 = document.createElement("link");
-      fontLink2.rel = "preconnect";
-      fontLink2.href = "https://fonts.gstatic.com";
-      fontLink2.crossOrigin = "anonymous";
-      document.head.appendChild(fontLink2);
-
-      const fontLink3 = document.createElement("link");
-      fontLink3.href =
-        "https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap";
-      fontLink3.rel = "stylesheet";
-      document.head.appendChild(fontLink3);
-
-      // Bootstrap Icons
-      const bootstrapIcons = document.createElement("link");
-      bootstrapIcons.rel = "stylesheet";
-      bootstrapIcons.href =
-        "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css";
-      document.head.appendChild(bootstrapIcons);
-
-      // AOS CSS
-      const aosLink = document.createElement("link");
-      aosLink.rel = "stylesheet";
-      aosLink.href = "https://unpkg.com/aos@next/dist/aos.css";
-      document.head.appendChild(aosLink);
-
-      // jQuery
-      const jqueryScript = document.createElement("script");
-      jqueryScript.src =
-        "https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js";
-      document.head.appendChild(jqueryScript);
-
-      // Bootstrap JS
-      const bootstrapScript = document.createElement("script");
-      bootstrapScript.src =
-        "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js";
-      bootstrapScript.integrity =
-        "sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4";
-      bootstrapScript.crossOrigin = "anonymous";
-      document.body.appendChild(bootstrapScript);
-
-      // AOS JS
-      const aosScript = document.createElement("script");
-      aosScript.src = "https://unpkg.com/aos@next/dist/aos.js";
-      aosScript.onload = () => {
-        if (window.AOS) {
-          window.AOS.init({
-            duration: 1000,
-            offset: 50,
-          });
-        }
-      };
-      document.body.appendChild(aosScript);
+    // Initialize external scripts (CSS is now preloaded in HTML)
+    const initializeExternalScripts = () => {
+      // Initialize AOS if available
+      if (window.AOS) {
+        window.AOS.init({
+          duration: 1000,
+          offset: 50,
+        });
+      } else {
+        // Fallback: load AOS if not already loaded
+        const aosScript = document.createElement("script");
+        aosScript.src = "https://unpkg.com/aos@next/dist/aos.js";
+        aosScript.onload = () => {
+          if (window.AOS) {
+            window.AOS.init({
+              duration: 1000,
+              offset: 50,
+            });
+          }
+        };
+        document.body.appendChild(aosScript);
+      }
     };
 
-    addExternalResources();
+    // Initialize scripts after a short delay to ensure DOM is ready
+    setTimeout(initializeExternalScripts, 100);
 
     // Progress bar animations
     const htmlTimer = setInterval(() => {
