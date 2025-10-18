@@ -254,7 +254,6 @@ export default function Project() {
 
             {/* Download CV button */}
             <div className="p d-lg-block">
-              
               <button className="c-btn">
                 <a
                   href="21CIS0008_Piumal.pdf"
@@ -270,10 +269,28 @@ export default function Project() {
       </nav>
       {/* Home Section */}
       <section className="home pt-3  pb-5" id="home">
+        {" "}
         <div className="container">
           <div className="row justify-content-evenly align-middle">
+            {/* Profile Image - Mobile First (order-1 on mobile, order-2 on desktop) */}
             <div
-              className="new col-10 col-md-6 text-center text-md-start"
+              className="col-12 col-md-4 d-block text-center order-1 order-md-2 mobile-profile-section"
+              data-aos="slide-left"
+            >
+              <div className="profile-frame">
+                <div className="profile-inner">
+                  <img
+                    src={banner01}
+                    className="img-fluid profile-image"
+                    alt="Banner"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Text Content - order-2 on mobile, order-1 on desktop */}
+            <div
+              className="new col-12 col-md-6 text-center text-md-start order-2 order-md-1"
               data-aos="slide-right"
             >
               {" "}
@@ -314,21 +331,7 @@ export default function Project() {
                   title="LinkedIn"
                 >
                   <i className="bi bi-linkedin"></i>
-                </a>
-              </div>
-            </div>{" "}
-            <div
-              className="col-10 col-md-4 d-none d-md-block "
-              data-aos="slide-left"
-            >
-              <div className="profile-frame">
-                <div className="profile-inner">
-                  <img
-                    src={banner01}
-                    className="img-fluid profile-image"
-                    alt="Banner"
-                  />
-                </div>
+                </a>{" "}
               </div>
             </div>
           </div>

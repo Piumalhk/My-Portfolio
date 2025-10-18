@@ -140,7 +140,7 @@ body {
 .home .new {
   margin-right: 0;
   order: 1;
- margin-bottom: 20px;
+  margin-bottom: 20px;
   margin-right: 190px;
 }
 
@@ -152,6 +152,11 @@ body {
   justify-content: center;
 }
 
+/* Mobile Profile Section */
+.mobile-profile-section {
+  margin-bottom: 2rem;
+}
+
 /* Social Buttons Positioning */
 .social-buttons {
   display: flex;
@@ -161,31 +166,60 @@ body {
   padding-top: 0;
 }
 
-/* Responsive adjustments */
+/* Mobile Home Section Responsiveness */
 @media (max-width: 768px) {
   .home {
     min-height: auto;
-    padding: 2rem 0;
+    padding: 1rem 0;
+  }
+
+  .home .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .home .row {
     min-height: auto;
+    align-items: center;
   }
 
-  .home .new {
-    order: 1;
-    text-align: center;
+  /* Profile image at the top on mobile */
+  .mobile-profile-section {
     margin-bottom: 2rem;
+    order: 1 !important;
   }
 
-  .home .col-md-4 {
-    order: 2;
-    margin-top: 1rem;
+  /* Text content below profile image on mobile */
+  .home .new {
+    order: 2 !important;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-align: center;
   }
 
   .social-buttons {
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .home {
+    padding: 0.5rem 0;
+  }
+
+  .mobile-profile-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .home .new {
+    padding: 0 1rem;
+  }
+
+  .social-buttons {
+    margin-top: 1.5rem;
+    gap: 0.8rem;
   }
 }
 .navbar-nav .nav-link {
@@ -539,7 +573,7 @@ section::before {
   display: flex;
   align-items: center;
 }
-.new1{
+.new1 {
   margin-left: -20px;
 }
 .home h2 {
@@ -571,53 +605,118 @@ section::before {
   }
 }
 /*home mobile responsive*/
+@media (max-width: 768px) {
+  .home h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .h {
+    font-size: 2rem;
+  }
+
+  .c-orange {
+    font-size: 2.5rem;
+  }
+
+  .one,
+  .two {
+    font-size: 1.2rem;
+  }
+
+  .text2 {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  .h-btn {
+    width: 120px;
+    height: 45px;
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 576px) {
   .home h2 {
     font-size: 2rem;
-    line-height: 3rem;
-    margin-left: 40px;
+    line-height: 1.2;
+    margin-bottom: 1rem;
   }
+
+  .h {
+    font-size: 1.5rem;
+  }
+
   .c-orange {
-    font-size: 3rem;
+    font-size: 2rem;
   }
-  .home p {
-    font-size: 1.1rem;
-    margin-left: 40px;
-  }
-  .one {
-    font-size: 14px;
-    margin-left: 40px;
-  }
+
+  .one,
   .two {
-    font-size: 14px;
+    font-size: 1rem;
   }
+
+  .text2 {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
   .h-btn {
-   
-    width: 100px;
+    width: 110px;
     height: 40px;
-    font-size: medium;
+    font-size: 0.9rem;
   }
 
- 
   .c-btn {
-    width: 100px;
+    width: 110px;
     height: 40px;
-    font-size: small;
-   
-    align-items: center;
-  }
-  .p{
-     display: flex;
-  flex-direction: column;
-  align-items: center; 
+    font-size: 0.8rem;
   }
 
-  .github-btn {
+  .social-btn {
     width: 40px;
     height: 40px;
     font-size: 1rem;
-    margin-left: 10px;
-  } /* Original mobile responsive profile frame styles - removed duplicates */
+  }
+}
+
+@media (max-width: 400px) {
+  .home h2 {
+    font-size: 1.8rem;
+  }
+
+  .h {
+    font-size: 1.3rem;
+  }
+
+  .c-orange {
+    font-size: 1.8rem;
+  }
+
+  .one,
+  .two {
+    font-size: 0.9rem;
+  }
+
+  .text2 {
+    font-size: 0.85rem;
+  }
+
+  .h-btn {
+    width: 100px;
+    height: 38px;
+    font-size: 0.8rem;
+  }
+
+  .social-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
 }
 /* Expertise Section */
 .expertise {
@@ -682,11 +781,13 @@ section::before {
 @media (max-width: 576px) {
   .service-card {
     width: 350px;
+    
   }
 
   .content {
     width: 350px;
     padding-right: 40px;
+    
   }
 }
 
@@ -882,7 +983,7 @@ section::before {
   box-shadow: 0 20px 40px rgba(253, 203, 110, 0.3);
 }
 
-/* Responsive Design */
+/* Responsive Design for Skills Section */
 @media (max-width: 768px) {
   .skill-category {
     padding: 1.5rem;
@@ -896,25 +997,91 @@ section::before {
   .skill-item {
     height: 100px;
     padding: 1rem 0.5rem;
+    width: 100%;
+    max-width: 120px;
+    margin: 0 auto;
   }
 
   .skill-icon {
     font-size: 2rem;
   }
 
+  .skill-logo {
+    width: 35px;
+    height: 35px;
+  }
+
   .skill-item span {
     font-size: 0.8rem;
   }
+
+  /* Center skills in mobile */
+  .skill-category .row {
+    justify-content: center;
+  }
+
+  .skill-category .col-lg-2 {
+    flex: 0 0 auto;
+    width: auto;
+    margin-bottom: 1rem;
+  }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 576px) {
+  .skill-category {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .category-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
   .skill-item {
-    height: 80px;
-    margin-right: 20px;
+    height: 90px;
+    padding: 0.8rem 0.3rem;
+    width: 100px;
+    max-width: 100px;
   }
 
   .skill-icon {
-    font-size: 1rem;
+    font-size: 1.8rem;
+    height: 50px;
+  }
+
+  .skill-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .skill-item span {
+    font-size: 0.75rem;
+    margin-top: 0.3rem;
+  }
+
+  /* Better spacing for mobile */
+  .skill-category .row {
+    gap: 0.5rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .skill-item {
+    height: 80px;
+    width: 90px;
+    max-width: 90px;
+  }
+
+  .skill-icon {
+    font-size: 1.5rem;
+    height: 40px;
+  }
+
+  .skill-logo {
+    width: 25px;
+    height: 25px;
   }
 
   .skill-item span {
@@ -1977,9 +2144,108 @@ img {
   width: 400px;
   height: 400px;
   max-width: 400px;
- margin-bottom: 70px;
- 
+  margin: 40px auto 0 auto;
   border-radius: 50%;
+}
+
+/* Mobile responsive profile frame */
+@media (max-width: 1200px) {
+  .profile-frame {
+    width: 350px;
+    height: 350px;
+    max-width: 350px;
+    margin: 20px auto 0 auto;
+  }
+
+  .profile-inner {
+    width: 350px;
+    height: 350px;
+  }
+
+  .profile-image {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-frame {
+    width: 280px;
+    height: 280px;
+    max-width: 280px;
+    margin: 10px auto 0 auto;
+  }
+
+  .profile-inner {
+    width: 280px;
+    height: 280px;
+    border: 2px solid rgba(15, 15, 35, 0.9);
+  }
+
+  .profile-image {
+    width: 280px;
+    height: 280px;
+  }
+
+  .profile-frame::before {
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+  }
+
+  .profile-frame::after {
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-frame {
+    width: 220px;
+    height: 220px;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .profile-inner {
+    width: 220px;
+    height: 220px;
+  }
+
+  .profile-image {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-frame {
+    width: 180px;
+    height: 180px;
+    max-width: 180px;
+  }
+
+  .profile-inner {
+    width: 180px;
+    height: 180px;
+  }
+
+  .profile-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* Reduce animation intensity on smaller screens */
+  .profile-frame::before {
+    animation-duration: 4s;
+  }
+
+  .profile-frame::after {
+    animation-duration: 5s;
+  }
 }
 
 /* Animated Border Effect */
@@ -2127,56 +2393,56 @@ img {
 
 @media (max-width: 768px) {
   .profile-frame {
-    width: 100px;
-    height: 100px;
-    max-width: 100px;
+    width: 280px;
+    height: 280px;
+    max-width: 280px;
     margin: 0 auto;
     padding: 6px;
   }
 
   .profile-inner {
-    width: 100px;
-    height: 100px;
+    width: 280px;
+    height: 280px;
     border: 2px solid rgba(15, 15, 35, 0.9);
   }
 
   .profile-image {
-    width: 100px;
-    height: 100px;
+    width: 280px;
+    height: 280px;
   }
 
   .profile-frame::before {
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+  }
+
+  .profile-frame::after {
     top: -3px;
     left: -3px;
     right: -3px;
     bottom: -3px;
   }
-
-  .profile-frame::after {
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-  }
 }
 
 @media (max-width: 480px) {
   .profile-frame {
-    width: 50px;
-    height: 50px;
-    max-width: 50px;
+    width: 180px;
+    height: 180px;
+    max-width: 180px;
     padding: 4px;
     margin: 0 auto;
   }
 
   .profile-inner {
-    width: 50px;
-    height: 50px;
+    width: 180px;
+    height: 180px;
   }
 
   .profile-image {
-    width: 50px;
-    height: 50px;
+    width: 180px;
+    height: 180px;
   }
 
   /* Reduce animation intensity on smaller screens */
