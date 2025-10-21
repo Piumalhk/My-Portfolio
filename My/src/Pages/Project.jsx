@@ -700,7 +700,7 @@ export default function Project() {
                     <div className="project-overlay">
                       <div className="project-links">
                         <a
-                          href="#https://github.com/naveensanjula975/VocalGuard.git"
+                          href="https://github.com/naveensanjula975/VocalGuard.git"
                           className="github-link"
                           title="View on GitHub"
                         >
@@ -739,7 +739,7 @@ export default function Project() {
                     <div className="project-overlay">
                       <div className="project-links">
                         <a
-                          href="#https://github.com/Piumalhk/Sabra-Music.git"
+                          href="https://github.com/Piumalhk/Sabra-Music.git"
                           className="github-link"
                           title="View on GitHub"
                         >
@@ -858,7 +858,7 @@ export default function Project() {
                     <div className="project-overlay">
                       <div className="project-links">
                         <a
-                          href="#https://github.com/nadunthilina/HealLink.git"
+                          href="https://github.com/nadunthilina/HealLink.git"
                           className="github-link"
                           title="View on GitHub"
                         >
